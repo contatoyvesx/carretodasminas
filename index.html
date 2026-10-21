@@ -1,537 +1,150 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f52d83">
-  <meta name="description" content="Mudanças e carretos com cuidado desde 2016. Foco em mulheres e público LGBTQIAPN+. São Paulo, Grande São Paulo e outros estados.">
-  <meta property="og:title" content="Carreto das Minas — Sua mudança, do seu jeito">
-  <meta property="og:description" content="Mudanças com cuidado, respeito e acolhimento. Faça seu orçamento pelo WhatsApp.">
-  <meta property="og:type" content="website">
-  <title>Carreto das Minas | Sua mudança, do seu jeito 💖</title>
-  <link rel="icon" href="./logo.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --pink:#f52d83;--pink-deep:#cb1764;--pink-soft:#ffe1ef;--pink-pale:#fff4f8;
-      --plum:#26083f;--plum-2:#351052;--ink:#211727;--muted:#766b78;
-      --cream:#fffaf7;--paper:#fff;--line:#eedce5;--lime:#fae84b;
-      --shadow:0 24px 70px rgba(49,9,46,.12);--radius:28px;
-      --sans:"DM Sans",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      --display:"Oswald","Arial Narrow",sans-serif;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:94px}
-    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
-    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.23;background-image:linear-gradient(30deg,transparent 49.6%,#eadde2 49.8%,#eadde2 50.2%,transparent 50.4%),linear-gradient(150deg,transparent 49.6%,#eadde2 49.8%,#eadde2 50.2%,transparent 50.4%);background-size:110px 110px}
-    a{color:inherit}
-    button,input,select,textarea{font:inherit}
-    button,a{-webkit-tap-highlight-color:transparent}
-    .wrap{width:min(1160px,calc(100% - 44px));margin:0 auto}
-    .announcement{background:var(--plum);color:#fff;font-size:.82rem;font-weight:700;text-align:center;padding:9px 14px;letter-spacing:.015em}
-    .announcement b{color:var(--lime)}
-    header{position:sticky;top:0;z-index:50;background:rgba(255,250,247,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(238,220,229,.8)}
-    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}
-    .logo{display:flex;align-items:center;text-decoration:none;gap:10px;min-width:180px}
-    .logo img{width:60px;height:60px;object-fit:contain;border-radius:14px}
-    .logo-text{font-family:var(--display);font-size:1.15rem;line-height:1;text-transform:uppercase;font-weight:700;letter-spacing:.01em}
-    .logo-text span{display:block;color:var(--pink-deep);font-size:.86rem;letter-spacing:.15em;margin-top:5px}
-    .navlinks{display:flex;align-items:center;gap:27px}
-    .navlinks>a:not(.btn){font-size:.88rem;font-weight:800;text-decoration:none;color:#554654;transition:color .2s}
-    .navlinks>a:not(.btn):hover{color:var(--pink-deep)}
-    .btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;border:0;cursor:pointer;border-radius:999px;padding:15px 22px;background:var(--pink);color:#fff;font-weight:800;font-size:.93rem;text-decoration:none;box-shadow:0 9px 22px rgba(245,45,131,.22);transition:transform .2s,background .2s,box-shadow .2s}
-    .btn:hover{transform:translateY(-3px);background:var(--pink-deep);box-shadow:0 13px 28px rgba(245,45,131,.3)}
-    .btn.dark{background:var(--plum);box-shadow:none}.btn.dark:hover{background:#431263}
-    .btn.line{background:transparent;color:var(--plum);border:1px solid #d9c5d4;box-shadow:none}
-    .btn.line:hover{background:#fff}
-    .btn .arrow{font-size:1.15em;line-height:.8}
-    .mobile-cta{display:none}
-    .hero{position:relative;isolation:isolate;overflow:hidden;padding:66px 0 78px;background:linear-gradient(115deg,#fff9f6 0%,#fff0f7 59%,#f9dcf0 100%)}
-    .hero:before{content:"";position:absolute;width:660px;height:660px;border:1px solid rgba(245,45,131,.13);border-radius:50%;right:-215px;top:-225px;z-index:-1;box-shadow:0 0 0 42px rgba(245,45,131,.035),0 0 0 84px rgba(245,45,131,.025)}
-    .hero:after{content:"";position:absolute;width:380px;height:380px;border:1px dashed rgba(38,8,63,.18);border-radius:50%;right:105px;bottom:-250px;z-index:-1}
-    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:35px}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--pink-deep);font-size:.75rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-    .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 5px #f52d831c}
-    h1,h2,h3,p{margin-top:0}
-    h1{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(3.2rem,6.25vw,6.25rem);line-height:.98;letter-spacing:-.035em;color:var(--plum);margin:22px 0 23px;max-width:650px}
-    h1 .pink{color:var(--pink-deep);position:relative;white-space:nowrap}
-    h1 .underline{position:relative;white-space:nowrap}
-    h1 .underline:after{content:"";position:absolute;height:8px;background:var(--pink);left:0;right:5%;bottom:-7px;border-radius:100%;transform:rotate(-2deg)}
-    .hero-copy{font-size:1.08rem;line-height:1.7;color:#615362;max-width:515px;margin-bottom:27px}
-    .hero-copy strong{color:var(--plum)}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .mini-proof{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:27px;font-size:.8rem;color:#645568;font-weight:750}
-    .mini-proof span{display:flex;align-items:center;gap:7px}
-    .mini-proof i{font-style:normal;color:var(--pink-deep);font-size:1.1rem}
-    .hero-art{position:relative;min-width:0;padding:22px 0 26px}
-    .art-panel{position:relative;min-height:420px;overflow:hidden;border-radius:40px;background:linear-gradient(145deg,var(--plum),#4b136d 65%,#7a1d78);box-shadow:0 30px 80px #38114430;padding:27px;color:white}
-    .art-panel:before{content:"";position:absolute;width:360px;height:360px;border:1px dashed #ffffff50;border-radius:50%;right:-105px;top:-115px}
-    .art-panel:after{content:"";position:absolute;width:255px;height:255px;border:1px solid #ffffff26;border-radius:50%;left:-90px;bottom:-130px}
-    .art-top{display:flex;align-items:center;justify-content:space-between;gap:10px;position:relative;z-index:2}
-    .pill{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:999px;background:#ffffff1b;border:1px solid #ffffff40;color:#fff;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800}
-    .pill .heart{color:#ff7fb5;font-size:1rem}
-    .route-word{font-family:var(--display);font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:#f9d9ec}
-    .truck-illustration{position:absolute;inset:45px 5px 50px;display:flex;align-items:center;justify-content:center;z-index:1}
-    .truck-illustration svg{width:100%;height:auto;max-height:335px;overflow:visible;filter:drop-shadow(0 23px 16px #10051c66)}
-    .route-line{position:absolute;left:14%;right:12%;bottom:73px;height:56px;border-bottom:3px dashed #ff83b9;border-radius:0 0 50% 55%;transform:rotate(-7deg);z-index:0}
-    .art-sticker{position:absolute;z-index:4;left:-17px;bottom:5px;background:var(--lime);color:var(--plum);border-radius:17px;padding:14px 17px;box-shadow:0 15px 35px #26083f24;transform:rotate(-4deg);max-width:210px}
-    .art-sticker b{display:block;font-family:var(--display);font-size:1.35rem;text-transform:uppercase;line-height:1.05}
-    .art-sticker span{display:block;font-size:.77rem;font-weight:700;margin-top:6px}
-    .art-sticker span .small-heart{color:var(--pink-deep)}
-    .art-badge{position:absolute;z-index:4;right:-13px;top:1px;background:#fff;border-radius:19px;padding:12px 16px;display:flex;align-items:center;gap:10px;box-shadow:0 15px 35px #26083f18;transform:rotate(3deg);color:var(--plum)}
-    .art-badge strong{font-family:var(--display);font-size:1.8rem;line-height:1}
-    .art-badge small{display:block;font-size:.68rem;font-weight:800;line-height:1.3;text-transform:uppercase}
-    .badge-icon{width:37px;height:37px;display:grid;place-items:center;border-radius:50%;background:var(--pink-soft);font-size:1.2rem}
-    .hero-bottom{position:relative;margin-top:49px;display:grid;grid-template-columns:1.05fr repeat(3,1fr);border-radius:23px;background:#fff;box-shadow:0 14px 45px #4e174012;border:1px solid #f1dfe7;overflow:hidden}
-    .hero-bottom-intro{padding:22px 25px;background:var(--pink);color:white;display:flex;align-items:center;gap:14px}
-    .hero-bottom-intro .pin{font-size:1.7rem}
-    .hero-bottom-intro b{display:block;font-family:var(--display);font-size:1.45rem;line-height:1.08;text-transform:uppercase}
-    .hero-bottom-intro small{display:block;margin-top:4px;opacity:.9;font-size:.75rem}
-    .scope{padding:19px 14px;display:flex;align-items:center;justify-content:center;gap:12px;border-left:1px solid #f2e2e9}
-    .scope .ico{font-size:1.8rem}
-    .scope b{display:block;color:var(--plum);font-family:var(--display);font-size:1.05rem;line-height:1.1;text-transform:uppercase}
-    .scope small{display:block;color:var(--muted);font-size:.7rem;margin-top:4px}
-    section.section{padding:94px 0}
-    .section-head{max-width:690px;margin:0 auto 43px;text-align:center}
-    .section-head .eyebrow{justify-content:center}
-    .section-head h2{font-family:var(--display);font-size:clamp(2.55rem,4.4vw,4.25rem);line-height:1.03;letter-spacing:-.02em;text-transform:uppercase;color:var(--plum);margin:16px 0}
-    .section-head h2 em{font-style:normal;color:var(--pink-deep)}
-    .section-head p{max-width:590px;margin:0 auto;color:var(--muted);font-size:1rem;line-height:1.75}
-    .services{background:#fff}
-    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
-    .service-card{position:relative;overflow:hidden;min-height:270px;background:var(--pink-pale);border:1px solid #f1dbe6;border-radius:25px;padding:27px;transition:transform .25s,box-shadow .25s}
-    .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-    .service-card:nth-child(2){background:#f4edf8;border-color:#e4d7ee}
-    .service-card:nth-child(3){background:#fff6d8;border-color:#f1e8bd}
-    .service-icon{width:62px;height:62px;background:#fff;border-radius:19px;display:grid;place-items:center;font-size:1.85rem;box-shadow:0 5px 14px #320b3d0b;margin-bottom:23px}
-    .service-no{position:absolute;right:21px;top:20px;font-family:var(--display);font-size:3.3rem;line-height:1;color:#eec5d9}
-    .service-card h3{position:relative;font-family:var(--display);font-size:1.65rem;line-height:1.12;text-transform:uppercase;color:var(--plum);margin-bottom:11px}
-    .service-card p{font-size:.91rem;line-height:1.7;color:#706272;margin:0 0 21px}
-    .service-link{text-decoration:none;color:var(--pink-deep);font-weight:900;font-size:.86rem}
-    .service-link span{margin-left:4px}
-    .values{position:relative;overflow:hidden;background:var(--plum);color:#fff}
-    .values:before{content:"";position:absolute;width:580px;height:580px;border:1px solid #ffffff13;border-radius:50%;right:-220px;top:-250px;box-shadow:0 0 0 40px #ffffff07,0 0 0 80px #ffffff04}
-    .values-grid{position:relative;display:grid;grid-template-columns:.88fr 1.12fr;gap:60px;align-items:center}
-    .values-title .eyebrow{color:#ff90bf}
-    .values-title h2{font-family:var(--display);font-size:clamp(2.8rem,5vw,5.2rem);line-height:.98;text-transform:uppercase;letter-spacing:-.025em;margin:18px 0 20px}
-    .values-title h2 em{font-style:normal;color:#ff72b0}
-    .values-title p{max-width:425px;color:#ded0e5;line-height:1.8}
-    .values-quote{border-left:4px solid var(--lime);padding:5px 0 5px 18px;margin-top:28px;font-size:.9rem;line-height:1.65;color:#f8e9f5;font-weight:700}
-    .value-list{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-    .value-item{border:1px solid #ffffff28;background:#ffffff0b;padding:20px;border-radius:20px;min-height:167px}
-    .value-item .value-icon{font-size:1.55rem;display:block;margin-bottom:13px}
-    .value-item h3{font-family:var(--display);font-size:1.32rem;line-height:1.13;text-transform:uppercase;margin:0 0 7px}
-    .value-item p{font-size:.84rem;line-height:1.65;color:#ddcfe5;margin:0}
-    .fleet{background:linear-gradient(180deg,#fff8fb,#fff)}
-    .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
-    .vehicle{border-radius:25px;overflow:hidden;border:1px solid #ecd9e4;background:#fff;box-shadow:0 13px 38px #3510520a;transition:transform .22s,box-shadow .22s}
-    .vehicle:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-    .vehicle-art{height:175px;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(140deg,#ffe7f1,#f6c8e0)}
-    .vehicle:nth-child(2) .vehicle-art{background:linear-gradient(140deg,#f2e7fa,#ddc4f1)}
-    .vehicle:nth-child(3) .vehicle-art{background:linear-gradient(140deg,#fff0c1,#f8d9a1)}
-    .vehicle-art:before{content:"";width:195px;height:195px;position:absolute;border:1px dashed #4b17452b;border-radius:50%;left:calc(50% - 97px);top:15px}
-    .vehicle-art svg{position:relative;z-index:1;width:88%;max-width:310px;filter:drop-shadow(0 12px 10px #35105220)}
-    .vehicle-content{padding:22px 23px 24px}
-    .vehicle-type{font-family:var(--display);font-size:1.65rem;line-height:1.08;text-transform:uppercase;color:var(--plum);margin:0 0 8px}
-    .vehicle-content p{color:var(--muted);font-size:.88rem;line-height:1.65;min-height:46px;margin:0 0 17px}
-    .vehicle-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px}
-    .vehicle-bottom span{font-size:.73rem;font-weight:900;color:var(--pink-deep);letter-spacing:.04em;text-transform:uppercase}
-    .round-arrow{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--pink-soft);color:var(--pink-deep);text-decoration:none;font-size:1.2rem}
-    .fleet-note{text-align:center;margin:28px auto 0;color:var(--muted);font-size:.83rem}
-    .fleet-note strong{color:var(--plum)}
-    .process{background:var(--pink-pale)}
-    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:process}
-    .process-card{position:relative;border-radius:23px;background:#fff;padding:28px 26px;border:1px solid #f1dce6;counter-increment:process}
-    .process-card:before{content:"0" counter(process);display:grid;place-items:center;width:45px;height:45px;background:var(--plum);border-radius:50%;font-family:var(--display);font-size:1.15rem;color:#fff;margin-bottom:24px}
-    .process-card h3{font-family:var(--display);font-size:1.45rem;text-transform:uppercase;color:var(--plum);margin-bottom:8px}
-    .process-card p{font-size:.9rem;color:var(--muted);line-height:1.7;margin:0}
-    .form-section{background:#fff;padding:96px 0}
-    .form-layout{display:grid;grid-template-columns:.76fr 1.24fr;gap:45px;align-items:start}
-    .form-intro{position:sticky;top:110px}
-    .form-intro h2{font-family:var(--display);font-size:clamp(2.8rem,4.7vw,4.75rem);text-transform:uppercase;letter-spacing:-.025em;line-height:.97;color:var(--plum);margin:19px 0}
-    .form-intro h2 em{font-style:normal;color:var(--pink-deep)}
-    .form-intro>p{color:var(--muted);line-height:1.8}
-    .form-points{display:grid;gap:12px;margin-top:25px}
-    .form-point{display:flex;gap:11px;align-items:flex-start;font-size:.88rem;color:#5f5363;font-weight:700}
-    .form-point .tick{display:grid;place-items:center;flex:none;width:23px;height:23px;border-radius:50%;background:var(--pink-soft);color:var(--pink-deep);font-weight:900}
-    .whatsapp-number{display:flex;align-items:center;gap:12px;border-radius:17px;background:#f1faee;padding:15px 17px;margin-top:30px}
-    .whatsapp-number .wa{font-size:1.45rem}
-    .whatsapp-number strong{display:block;font-size:.9rem;color:#22552e}
-    .whatsapp-number small{color:#598160;font-size:.76rem}
-    form{background:var(--cream);border:1px solid #ead6e1;border-radius:28px;padding:30px;box-shadow:0 25px 70px #3510520e}
-    .form-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid #ecdce4}
-    .form-heading h3{font-family:var(--display);font-size:1.7rem;text-transform:uppercase;color:var(--plum);margin:0}
-    .form-heading span{font-size:.72rem;font-weight:900;color:var(--pink-deep);background:var(--pink-soft);padding:8px 10px;border-radius:999px;white-space:nowrap}
-    .fields{display:grid;grid-template-columns:1fr 1fr;gap:17px}
-    .field{display:flex;flex-direction:column;gap:7px;min-width:0}
-    .field.full{grid-column:1/-1}
-    label{font-size:.82rem;font-weight:850;color:#433247}
-    .required{color:var(--pink-deep)}
-    input,select,textarea{width:100%;min-width:0;padding:14px 14px;border:1px solid #e4d4df;border-radius:12px;background:#fff;color:var(--ink);outline:none;font-size:.91rem;transition:border-color .15s,box-shadow .15s}
-    input::placeholder,textarea::placeholder{color:#a196a3}
-    input:focus,select:focus,textarea:focus{border-color:var(--pink);box-shadow:0 0 0 4px #f52d8315}
-    textarea{min-height:102px;resize:vertical}
-    .hint{color:#827584;font-size:.75rem;line-height:1.5;margin:0}
-    .checkbox{display:flex;gap:10px;align-items:flex-start;color:#6f6272;font-size:.81rem;line-height:1.55}
-    .checkbox input{width:17px;min-width:17px;height:17px;margin-top:3px;accent-color:var(--pink)}
-    .submit{width:100%;margin-top:19px;padding:17px}
-    .fineprint{font-size:.73rem;line-height:1.6;color:#8d7d8e;text-align:center;margin:12px 0 0}
-    #form-status{font-size:.82rem;color:var(--pink-deep);font-weight:700;margin:12px 0 0}
-    .faq{background:var(--cream)}
-    .faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:55px;align-items:start}
-    .faq-title h2{font-family:var(--display);font-size:clamp(2.7rem,4vw,4.2rem);text-transform:uppercase;line-height:.99;color:var(--plum);margin:16px 0}
-    .faq-title p{color:var(--muted);font-size:.95rem;line-height:1.75}
-    .faq-list{border-top:1px solid #e8d7e1}
-    details{border-bottom:1px solid #e8d7e1;padding:19px 0}
-    summary{cursor:pointer;list-style:none;position:relative;padding-right:35px;font-weight:850;color:var(--plum)}
-    summary::-webkit-details-marker{display:none}
-    summary:after{content:"+";position:absolute;right:0;top:-5px;width:29px;height:29px;display:grid;place-items:center;border-radius:50%;background:var(--pink-soft);color:var(--pink-deep);font-size:1.25rem}
-    details[open] summary:after{content:"−"}
-    details p{font-size:.88rem;line-height:1.75;color:var(--muted);margin:12px 35px 0 0}
-    .final-cta{padding:0 0 88px;background:var(--cream)}
-    .final-card{position:relative;overflow:hidden;background:var(--pink);border-radius:30px;padding:43px 47px;display:flex;align-items:center;justify-content:space-between;gap:30px;color:#fff}
-    .final-card:after{content:"♡";font-family:Georgia,serif;font-size:18rem;font-weight:700;line-height:1;position:absolute;right:26%;top:-95px;opacity:.12;pointer-events:none}
-    .final-card>div,.final-card>a{position:relative;z-index:1}
-    .final-card h2{font-family:var(--display);font-size:clamp(2.2rem,4vw,3.7rem);text-transform:uppercase;line-height:1;margin:0 0 10px}
-    .final-card p{margin:0;color:#ffe5f0;max-width:540px}
-    .final-card .btn{background:var(--plum);box-shadow:none;white-space:nowrap}
-    footer{background:#1b092b;color:white;padding:40px 0 24px}
-    .footer-top{display:flex;align-items:center;justify-content:space-between;gap:30px;padding-bottom:28px;border-bottom:1px solid #ffffff25}
-    .footer-brand{display:flex;align-items:center;gap:14px}
-    .footer-brand img{width:68px;height:68px;border-radius:16px;background:#fffaf8}
-    .footer-brand b{font-family:var(--display);font-size:1.45rem;line-height:1;text-transform:uppercase}
-    .footer-brand span{display:block;color:#ff7fb5;font-size:.84rem;letter-spacing:.15em;margin-top:5px}
-    .footer-brand p{color:#cdbed6;font-size:.79rem;margin:7px 0 0}
-    .footer-links{display:flex;gap:20px;flex-wrap:wrap}
-    .footer-links a{font-size:.84rem;color:#f3e8f5;text-decoration:none;font-weight:750}
-    .footer-links a:hover{color:#ff8bbd}
-    .footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:21px;color:#bcaac7;font-size:.73rem}
-    .footer-bottom p{margin:0}
-    .floating-wa{position:fixed;right:21px;bottom:21px;z-index:60;width:62px;height:62px;border:4px solid #fff;border-radius:50%;display:grid;place-items:center;background:#21c766;color:#fff;text-decoration:none;font-size:1.65rem;box-shadow:0 9px 30px #2117273b;transition:transform .2s}
-    .floating-wa:hover{transform:translateY(-4px) scale(1.03)}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    @media(max-width:980px){
-      .hero-grid{grid-template-columns:1fr 1fr;gap:17px}.art-panel{min-height:370px;padding:22px}.truck-illustration{inset:55px 0 48px}
-      .hero-bottom{grid-template-columns:1fr 1fr}.hero-bottom-intro{grid-row:span 2}.scope:nth-child(3){border-top:1px solid #f2e2e9}
-      .values-grid{gap:32px}.form-layout{gap:28px}.navlinks{gap:16px}.navlinks>a:not(.btn){font-size:.82rem}
-    }
-    @media(max-width:760px){
-      .wrap{width:min(100% - 32px,1160px)}.announcement{font-size:.73rem}.nav{height:72px}.logo img{width:49px;height:49px}.logo{min-width:0}.logo-text{font-size:1rem}.logo-text span{font-size:.75rem}
-      .navlinks>a:not(.btn){display:none}.navlinks>.btn{padding:12px 15px;font-size:.81rem}.hero{padding:45px 0 58px}.hero-grid{grid-template-columns:1fr;gap:18px}
-      h1{font-size:clamp(3.5rem,12.5vw,5.6rem);margin:18px 0 18px}.hero-copy{font-size:1rem}.hero-actions{display:grid;grid-template-columns:1fr 1fr}
-      .hero-art{margin:0 8px;padding:8px 0 28px}.art-panel{min-height:340px;border-radius:29px}.truck-illustration{inset:55px 0 42px}.truck-illustration svg{max-height:285px}.art-badge{right:-9px}.art-sticker{left:-8px;bottom:0}
-      .hero-bottom{margin-top:33px}.hero-bottom-intro{padding:18px 16px}.hero-bottom-intro b{font-size:1.2rem}.scope{padding:15px 11px;gap:8px}.scope .ico{font-size:1.4rem}.scope b{font-size:.91rem}.scope small{font-size:.65rem}
-      section.section,.form-section{padding:69px 0}.section-head{margin-bottom:30px}.service-grid,.fleet-grid,.process-grid{grid-template-columns:1fr 1fr;gap:13px}
-      .service-card{padding:21px;min-height:248px}.service-card:last-child{grid-column:1/-1;min-height:220px}.service-icon{width:52px;height:52px;margin-bottom:18px}.service-card h3{font-size:1.42rem}.service-no{font-size:2.7rem}
-      .values-grid{grid-template-columns:1fr;gap:29px}.values-title h2{max-width:550px}.value-item{min-height:148px;padding:17px}
-      .vehicle-art{height:140px}.vehicle-content{padding:17px}.vehicle-type{font-size:1.4rem}.vehicle-content p{font-size:.83rem;min-height:65px}.vehicle-bottom{align-items:flex-start}.vehicle-bottom span{font-size:.65rem}
-      .form-layout{grid-template-columns:1fr}.form-intro{position:static}.form-intro h2{font-size:3.5rem}.form-points{grid-template-columns:1fr 1fr}.whatsapp-number{max-width:360px}
-      .faq-grid{grid-template-columns:1fr;gap:19px}.faq-title h2{font-size:3.15rem}.final-card{padding:30px;align-items:flex-start;flex-direction:column}.final-card .btn{white-space:normal}
-      .footer-top{align-items:flex-start;flex-direction:column}.footer-bottom{flex-direction:column}
-    }
-    @media(max-width:480px){
-      .wrap{width:calc(100% - 28px)}.announcement{padding:8px 10px;font-size:.69rem}.nav{height:65px}.logo img{width:43px;height:43px}.logo-text{font-size:.9rem}.logo-text span{font-size:.68rem;margin-top:4px}.navlinks>.btn{padding:10px 12px;font-size:.76rem}
-      .hero{padding:37px 0 48px}.eyebrow{font-size:.66rem;letter-spacing:.11em}.hero h1{font-size:clamp(3.1rem,15.5vw,4.3rem);line-height:.96}.hero-copy{font-size:.95rem;line-height:1.65}.hero-actions{grid-template-columns:1fr}.hero-actions .btn{width:100%}.mini-proof{gap:9px 14px;font-size:.75rem}
-      .hero-art{margin:0 6px}.art-panel{min-height:290px;padding:17px;border-radius:25px}.truck-illustration{inset:54px -7px 45px}.truck-illustration svg{max-height:235px}.art-top .pill{font-size:.62rem;padding:7px 9px}.route-word{font-size:.64rem}.art-badge{right:-11px;padding:9px 11px;gap:7px}.art-badge strong{font-size:1.45rem}.art-badge small{font-size:.59rem}.badge-icon{width:30px;height:30px}.art-sticker{padding:10px 12px;max-width:174px}.art-sticker b{font-size:1.15rem}.art-sticker span{font-size:.68rem}
-      .hero-bottom{grid-template-columns:1fr 1fr;border-radius:18px}.hero-bottom-intro{grid-column:1/-1;grid-row:auto;padding:15px 17px}.hero-bottom-intro b{font-size:1.15rem}.scope{min-height:75px;border-left:0}.scope:nth-child(3){border-top:0}.scope:nth-child(2),.scope:nth-child(4){border-right:1px solid #f2e2e9}.scope:nth-child(4){grid-column:1/-1;border-top:1px solid #f2e2e9}
-      section.section,.form-section{padding:58px 0}.section-head h2{font-size:2.6rem}.section-head p{font-size:.92rem}.service-grid,.fleet-grid,.process-grid{grid-template-columns:1fr}.service-card,.service-card:last-child{grid-column:auto;min-height:0}.service-card p{max-width:340px}.service-icon{margin-bottom:16px}
-      .values-title h2{font-size:3.25rem}.value-list{gap:9px}.value-item{padding:14px;min-height:165px}.value-item h3{font-size:1.18rem}.value-item p{font-size:.78rem}
-      .vehicle-art{height:170px}.vehicle-content p{min-height:0}.process-card{padding:22px}.form-intro h2{font-size:3.3rem}.form-points{grid-template-columns:1fr}form{padding:20px 16px;border-radius:21px}.fields{grid-template-columns:1fr;gap:15px}.field.full{grid-column:auto}.form-heading{align-items:flex-start;flex-direction:column;gap:9px}.form-heading h3{font-size:1.55rem}.final-card{padding:28px 23px;border-radius:23px}.final-card h2{font-size:2.5rem}.footer-brand img{width:58px;height:58px}.footer-links{gap:15px}.floating-wa{width:55px;height:55px;right:14px;bottom:14px}
-    }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f32b83">
+<meta name="description" content="Mudanças com cuidado desde 2016. Foco em mulheres e público LGBTQIAPN+. Grande São Paulo e outros estados.">
+<meta property="og:title" content="Carreto das Minas — Sua mudança merece respeito"><meta property="og:description" content="Mudanças com cuidado desde 2016. Liderança feminina, respeito e acolhimento.">
+<title>Carreto das Minas — Sua mudança merece respeito</title>
+<link rel="icon" href="./logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#f32b83;--pink2:#cf1768;--soft:#ffdeec;--plum:#210a36;--plum2:#381052;--yellow:#f9eb4b;--cream:#fff9f7;--paper:#fff;--ink:#25192b;--muted:#7b6e7d;--line:#efdbe5;--sans:"DM Sans",Arial,sans-serif;--display:"Oswald","Arial Narrow",sans-serif;--ease:cubic-bezier(.22,.78,.22,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}img{display:block;max-width:100%}a{color:inherit}h1,h2,h3,p{margin-top:0}::selection{background:var(--pink);color:#fff}
+.wrap{width:min(1180px,calc(100% - 44px));margin:auto}
+.microbar{display:flex;justify-content:center;align-items:center;gap:11px;padding:9px 12px;background:var(--plum);color:#fff;text-align:center;font-size:.73rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.microbar strong{color:var(--yellow)}.microbar i{font-style:normal;color:#ff80b8}
+header{position:sticky;top:0;z-index:50;background:#fffaf7ed;backdrop-filter:blur(17px);border-bottom:1px solid #efdce5}.nav{height:80px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:9px;text-decoration:none}.brand img{width:58px;height:58px;object-fit:contain;mix-blend-mode:multiply}.brandname{font:700 1.25rem/.92 var(--display);letter-spacing:-.02em;text-transform:uppercase;color:var(--plum)}.brandname span{display:block;color:var(--pink2);font-size:.83rem;letter-spacing:.19em;margin-top:5px}
+.navlinks{display:flex;align-items:center;gap:25px}.navlinks>a:not(.btn){font-size:.84rem;font-weight:800;text-decoration:none;color:#59485c}.navlinks>a:not(.btn):hover{color:var(--pink2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 21px;border:0;border-radius:999px;background:var(--pink);color:white;text-decoration:none;font-size:.9rem;font-weight:850;cursor:pointer;box-shadow:0 9px 24px #f32b8338;transition:transform .25s var(--ease),background .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);background:var(--pink2);box-shadow:0 13px 27px #f32b8347}.btn.dark{background:var(--plum);box-shadow:none}.btn.dark:hover{background:#481565}.btn.yellow{background:var(--yellow);color:var(--plum);box-shadow:none}.btn.outline{background:transparent;color:var(--plum);border:1px solid #d9c4d5;box-shadow:none}.btn.outline:hover{background:#fff}.arrow{font-size:1.2em;transition:transform .2s}.btn:hover .arrow{transform:translate(3px,-2px)}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(120deg,#fffaf7 0%,#fff1f7 62%,#f9dbea 100%);padding:45px 0 42px}.hero:before{content:"";position:absolute;z-index:-1;inset:0;background-image:radial-gradient(#e4a8c8 1px,transparent 1px);background-size:27px 27px;opacity:.36;mask-image:linear-gradient(90deg,#000,transparent 43%)}.hero:after{content:"";position:absolute;z-index:-1;right:-210px;top:-300px;width:660px;height:660px;border:1px solid #f32b8326;border-radius:50%;box-shadow:0 0 0 42px #f32b8308,0 0 0 86px #f32b8305}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:30px}.hero-copy{position:relative;z-index:3;padding:14px 0}.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--pink2)}.eyebrow i{font-style:normal;font-size:1.25rem}
+h1{max-width:650px;margin:20px 0 22px;font:700 clamp(3.65rem,7vw,7.3rem)/.91 var(--display);letter-spacing:-.045em;text-transform:uppercase;color:var(--plum)}h1 em{font-style:normal;color:var(--pink2);position:relative;display:inline-block}h1 em:after{content:"";position:absolute;left:0;right:-2px;bottom:-3px;height:7px;border-radius:99px;background:var(--yellow);transform:rotate(-2deg)}
+.hero-copy>p{max-width:510px;color:#6e6170;font-size:1rem;line-height:1.8;margin:0 0 25px}.hero-copy>p strong{color:var(--plum)}.hero-actions{display:flex;gap:11px;flex-wrap:wrap}.hero-note{display:flex;align-items:center;gap:10px;margin-top:25px;color:#58465d;font-size:.79rem;font-weight:800}.hero-note .heart{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:var(--soft);color:var(--pink2);font-size:1.18rem}.hero-note small{display:block;font-size:.71rem;color:#8d7d8c;font-weight:600;margin-top:3px}
+.hero-art{position:relative;padding:0 10px 24px}.hero-photo{height:535px;position:relative;overflow:hidden;border-radius:48% 48% 25px 25px/23% 23% 25px 25px;background:#e9c6d9;box-shadow:0 28px 70px #30103f2d}.hero-photo>img{height:100%;width:100%;object-fit:cover;object-position:49% 48%;transition:transform 1.1s var(--ease);filter:saturate(.88)}.hero-photo:hover>img{transform:scale(1.045)}.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#210a3600 35%,#210a36c7 100%),linear-gradient(90deg,#210a3622,transparent 80%)}
+.photo-copy{position:absolute;z-index:2;left:22px;right:22px;bottom:24px;color:#fff}.photo-copy .pill{display:inline-flex;padding:8px 11px;border:1px solid #ffffff69;background:#210a3657;backdrop-filter:blur(8px);border-radius:99px;font-size:.66rem;font-weight:900;letter-spacing:.1em}.photo-copy h2{font:600 clamp(2.4rem,4vw,3.8rem)/.97 var(--display);text-transform:uppercase;margin:15px 0 0}.photo-copy h2 span{color:var(--yellow)}
+.year-stamp{position:absolute;z-index:3;left:-15px;top:43px;width:112px;height:112px;border-radius:50%;display:grid;place-content:center;text-align:center;background:var(--yellow);color:var(--plum);box-shadow:0 12px 25px #210a3633;transform:rotate(-10deg);animation:float 5s ease-in-out infinite}.year-stamp strong{font:700 2.35rem/.95 var(--display)}.year-stamp small{font-size:.58rem;letter-spacing:.1em;font-weight:950;text-transform:uppercase;margin-top:5px}.pink-sticker{position:absolute;z-index:4;right:-3px;bottom:0;max-width:170px;padding:15px 17px;background:var(--pink);border:5px solid var(--cream);border-radius:17px;color:white;transform:rotate(4deg);box-shadow:0 14px 23px #210a3622}.pink-sticker b{display:block;font:600 1.25rem/1.05 var(--display);text-transform:uppercase}.pink-sticker small{display:block;font-size:.66rem;font-weight:800;line-height:1.4;margin-top:5px}
+.hero-strip{display:grid;grid-template-columns:1.15fr repeat(3,1fr);margin-top:29px;border:1px solid #efdbe5;background:white;border-radius:16px;overflow:hidden;box-shadow:0 13px 32px #3010400e}.strip-lead{display:flex;align-items:center;gap:12px;padding:18px 20px;background:var(--plum);color:white}.strip-lead .pin{color:var(--pink);font-size:1.65rem}.strip-lead b{display:block;font:600 1.25rem/1 var(--display);text-transform:uppercase}.strip-lead small{display:block;color:#d7c6e0;font-size:.66rem;margin-top:6px}.strip-item{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 12px;border-right:1px solid #f1e3e9}.strip-item:last-child{border-right:0}.strip-item .symbol{font-size:1.45rem;color:var(--pink2)}.strip-item strong{display:block;font:600 1.02rem/1.05 var(--display);text-transform:uppercase;color:var(--plum)}.strip-item small{display:block;font-size:.66rem;color:var(--muted);margin-top:4px}
+.marquee{overflow:hidden;background:var(--pink);color:#fff;border-block:1px solid #dd1c71}.marquee-track{display:flex;gap:24px;width:max-content;padding:12px 0;animation:marquee 34s linear infinite;font:500 1rem var(--display);letter-spacing:.11em;text-transform:uppercase;white-space:nowrap}.marquee-track span{display:flex;align-items:center;gap:21px}.marquee-track i{font-style:normal;color:var(--yellow);font-size:1.3rem}.marquee:hover .marquee-track{animation-play-state:paused}
+.section{padding:90px 0}.section-head{max-width:760px;margin:0 auto 42px;text-align:center}.section-head .eyebrow{justify-content:center}.section-head h2{font:600 clamp(2.8rem,5.2vw,5.1rem)/.97 var(--display);letter-spacing:-.025em;text-transform:uppercase;color:var(--plum);margin:17px 0 14px}.section-head h2 em{font-style:normal;color:var(--pink2)}.section-head p{max-width:600px;margin:0 auto;color:var(--muted);font-size:.94rem;line-height:1.85}
+.intro-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:42px;align-items:center}.intro-picture{position:relative}.intro-photo{height:495px;overflow:hidden;border-radius:24px;background:#ead8e3}.intro-photo img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}.intro-picture:hover .intro-photo img{transform:scale(1.05)}.photo-caption{position:absolute;left:17px;right:17px;bottom:17px;padding:13px 15px;background:#210a36dc;border-radius:11px;color:white;font-size:.72rem;font-weight:850;letter-spacing:.06em}.tape-sticker{position:absolute;z-index:2;right:-16px;top:24px;background:var(--yellow);color:var(--plum);padding:12px 14px;font:600 1.18rem/1 var(--display);text-transform:uppercase;transform:rotate(5deg);box-shadow:0 9px 20px #210a3625}.intro-copy .eyebrow{margin-bottom:15px}.intro-copy h2{font:600 clamp(2.9rem,4.7vw,4.7rem)/.97 var(--display);text-transform:uppercase;color:var(--plum);margin:0 0 21px;letter-spacing:-.03em}.intro-copy h2 em{font-style:normal;color:var(--pink2)}.intro-copy>p{font-size:.94rem;line-height:1.9;color:#776a7a;margin:0 0 15px}.value-points{display:grid;gap:13px;margin-top:24px}.value-point{display:flex;align-items:flex-start;gap:12px}.value-point i{font-style:normal;flex:none;width:29px;height:29px;display:grid;place-items:center;border-radius:50%;background:var(--soft);color:var(--pink2);font-weight:900}.value-point b{display:block;font-size:.88rem;color:var(--plum)}.value-point small{display:block;margin-top:3px;color:var(--muted);font-size:.79rem;line-height:1.55}
+.services{background:#fff}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service-card{overflow:hidden;border:1px solid #eedbe5;border-radius:22px;background:#fff9fc;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}.service-card:hover{transform:translateY(-8px);box-shadow:0 22px 48px #260a3d1c}.service-photo{height:245px;position:relative;overflow:hidden;background:#f5d9e6}.service-photo img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}.service-card:hover .service-photo img{transform:scale(1.065)}.service-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 65%,#210a363f)}.number{position:absolute;z-index:2;top:15px;left:15px;width:41px;height:41px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--plum);font:600 1.1rem var(--display)}.service-info{padding:22px}.service-info h3{font:600 1.72rem/1.06 var(--display);text-transform:uppercase;color:var(--plum);margin:0 0 10px}.service-info p{font-size:.83rem;line-height:1.75;color:var(--muted);margin:0 0 17px}.textlink{display:inline-flex;align-items:center;gap:8px;color:var(--pink2);font-size:.8rem;font-weight:900;text-decoration:none}.textlink span{transition:transform .2s}.textlink:hover span{transform:translate(3px,-3px)}
+.statement{position:relative;isolation:isolate;overflow:hidden;background:var(--plum);color:#fff;padding:76px 0}.statement:before{content:"";position:absolute;z-index:-1;right:-150px;top:-280px;width:650px;height:650px;border:1px solid #ffffff1b;border-radius:50%;box-shadow:0 0 0 50px #ffffff07,0 0 0 100px #ffffff04}.statement-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px}.statement .eyebrow{color:#ff9bc6}.statement h2{font:600 clamp(3.3rem,6vw,6.4rem)/.93 var(--display);text-transform:uppercase;letter-spacing:-.03em;margin:17px 0 20px}.statement h2 em{font-style:normal;color:#ff72b1}.statement p{color:#e2d5e8;font-size:.93rem;line-height:1.85;max-width:550px;margin-bottom:25px}.statement .credits{font-size:.67rem;color:#bfaec9;margin:18px 0 0}.collage{position:relative;min-height:440px}.collage-big{position:absolute;right:0;top:0;width:77%;height:350px;overflow:hidden;border:7px solid var(--plum);border-radius:22px 22px 60px 22px;transform:rotate(2deg);box-shadow:0 20px 50px #0900145e}.collage-big img,.collage-small img{width:100%;height:100%;object-fit:cover}.collage-small{position:absolute;left:0;bottom:0;width:49%;height:200px;overflow:hidden;border:7px solid var(--plum);border-radius:20px;transform:rotate(-5deg);box-shadow:0 18px 40px #09001466}.collage-stamp{position:absolute;z-index:3;right:0;bottom:0;width:115px;height:115px;border-radius:50%;display:grid;place-content:center;text-align:center;padding:15px;background:var(--yellow);color:var(--plum);font:600 1.17rem/1.08 var(--display);text-transform:uppercase;transform:rotate(9deg);box-shadow:0 12px 28px #0003}
+.promo{padding:25px 0;background:#fff}.promo-banner{position:relative;isolation:isolate;overflow:hidden;min-height:390px;border-radius:25px;background:var(--plum);color:#fff;display:flex;align-items:center}.promo-banner>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 48%}.promo-banner:before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#210a36ed 0%,#210a36d6 41%,#210a3640 100%)}.promo-content{padding:45px 53px;max-width:730px}.promo-content .eyebrow{color:var(--yellow)}.promo-content h2{font:600 clamp(2.9rem,5.3vw,5.4rem)/.94 var(--display);text-transform:uppercase;margin:17px 0;letter-spacing:-.03em}.promo-content h2 span{color:#ff74b2}.promo-content p{max-width:525px;color:#eee2f1;font-size:.91rem;line-height:1.8;margin-bottom:24px}
+.fleet{background:var(--cream)}.fleet-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:31px}.fleet-head .eyebrow{margin-bottom:5px}.fleet-head h2{font:600 clamp(2.8rem,4.7vw,4.7rem)/.95 var(--display);text-transform:uppercase;color:var(--plum);margin:12px 0 0}.fleet-head h2 em{font-style:normal;color:var(--pink2)}.fleet-head>p{max-width:370px;margin:0;color:var(--muted);font-size:.87rem;line-height:1.8}.fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.fleet-card{position:relative;overflow:hidden;padding:23px;border:1px solid #ead7e2;border-radius:20px;background:white;transition:transform .25s var(--ease),box-shadow .25s}.fleet-card:hover{transform:translateY(-5px);box-shadow:0 18px 35px #260a3d10}.fleet-n{position:absolute;right:17px;top:13px;font:600 3.3rem/1 var(--display);color:#f9d3e3}.vehicle-icon{height:102px;display:flex;align-items:center;color:var(--pink2)}.vehicle-icon svg{width:100%;height:95px}.fleet-card h3{font:600 1.7rem var(--display);text-transform:uppercase;color:var(--plum);margin:10px 0 7px}.fleet-card p{min-height:47px;font-size:.82rem;line-height:1.7;color:var(--muted);margin:0 0 15px}.fleet-card a{font-size:.8rem;font-weight:900;color:var(--pink2);text-decoration:none}
+.coverage{padding:0 0 90px;background:var(--cream)}.coverage-card{display:grid;grid-template-columns:1fr 1fr;min-height:290px;overflow:hidden;border-radius:23px;background:var(--pink);color:white}.coverage-copy{padding:38px 42px}.coverage-copy .eyebrow{color:var(--plum)}.coverage-copy h2{font:600 clamp(2.7rem,4.3vw,4.4rem)/.96 var(--display);text-transform:uppercase;margin:14px 0}.coverage-copy p{font-size:.88rem;line-height:1.8;color:#fff0f5;max-width:460px;margin:0}.coverage-art{position:relative;overflow:hidden;background:linear-gradient(135deg,#c81463,#f75d9f)}.coverage-art:before{content:"";position:absolute;inset:-30%;background:repeating-linear-gradient(135deg,transparent 0 40px,#ffffff13 41px 43px);transform:rotate(-12deg)}.coverage-art svg{position:absolute;inset:0;width:100%;height:100%}.coverage-tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-4deg);width:240px;padding:22px;background:var(--plum);text-align:center;box-shadow:8px 8px 0 var(--yellow)}.coverage-tag b{display:block;font:600 2rem/1 var(--display);text-transform:uppercase}.coverage-tag span{display:block;color:#ff88bc;font-size:.72rem;font-weight:850;margin-top:8px}
+.quote{background:#fff;padding:89px 0}.quote-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:42px;align-items:start}.quote-copy{position:sticky;top:108px}.quote-copy h2{font:600 clamp(3.2rem,5.1vw,5.5rem)/.93 var(--display);text-transform:uppercase;letter-spacing:-.03em;color:var(--plum);margin:18px 0}.quote-copy h2 em{font-style:normal;color:var(--pink2)}.quote-copy>p{font-size:.91rem;line-height:1.85;color:var(--muted)}.benefits{display:grid;gap:12px;margin:25px 0}.benefit{display:flex;align-items:flex-start;gap:11px;font-size:.81rem;font-weight:750;color:#5c4c61}.benefit i{font-style:normal;flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--pink2)}.contact{display:flex;align-items:center;gap:12px;background:#eaf8ec;padding:15px 16px;border-radius:15px;color:#1b6031}.contact .wa{font-size:1.5rem}.contact b{display:block;font-size:.83rem}.contact small{display:block;color:#4d805c;font-size:.73rem;margin-top:3px}.quote-form{padding:27px;border:1px solid #eed8e4;border-radius:24px;background:#fff9fc;box-shadow:0 20px 55px #260a3d0b}.form-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:19px;margin-bottom:22px;border-bottom:1px solid #eedee6}.form-head h3{font:600 1.7rem var(--display);text-transform:uppercase;color:var(--plum);margin:0}.form-head span{padding:7px 10px;border-radius:999px;background:var(--yellow);font-size:.64rem;font-weight:950;text-transform:uppercase;white-space:nowrap}.fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{min-width:0;display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:.78rem;font-weight:850;color:#4b3d50}label .req{color:var(--pink2)}input,select,textarea{width:100%;min-width:0;padding:13px 14px;border:1px solid #e5d4df;border-radius:11px;background:#fff;color:var(--ink);font:400 .88rem var(--sans);outline:none;transition:border-color .2s,box-shadow .2s}input::placeholder,textarea::placeholder{color:#a89aa7}input:focus,select:focus,textarea:focus{border-color:var(--pink);box-shadow:0 0 0 4px #f32b8315}textarea{min-height:93px;resize:vertical}.hint{font-size:.71rem;color:#897b8a;line-height:1.5;margin:0}.consent{display:flex;flex-direction:row;align-items:flex-start;gap:10px;font-size:.76rem;font-weight:500;line-height:1.6;color:#786a7a}.consent input{width:17px;min-width:17px;height:17px;margin-top:3px;accent-color:var(--pink)}.submit{width:100%;margin-top:20px;padding:17px}.fineprint{text-align:center;color:#8b7b8c;font-size:.7rem;line-height:1.6;margin:12px 0 0}#form-status{font-size:.8rem;font-weight:750;color:var(--pink2);margin:12px 0 0}
+.faq{padding:85px 0;background:#f8eff7}.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}.faq-copy h2{font:600 clamp(3rem,4.6vw,4.7rem)/.95 var(--display);text-transform:uppercase;color:var(--plum);margin:17px 0}.faq-copy h2 em{font-style:normal;color:var(--pink2)}.faq-copy p{font-size:.89rem;line-height:1.8;color:var(--muted);margin-bottom:20px}.faq-list{border-top:1px solid #e3cfdf}details{padding:18px 0;border-bottom:1px solid #e3cfdf}summary{position:relative;list-style:none;cursor:pointer;padding-right:42px;font-size:.9rem;font-weight:850;color:var(--plum)}summary::-webkit-details-marker{display:none}summary:after{content:"+";position:absolute;right:0;top:-4px;width:29px;height:29px;display:grid;place-items:center;border-radius:50%;background:white;color:var(--pink2);font-size:1.25rem}details[open] summary:after{content:"−";background:var(--pink);color:white}details p{font-size:.82rem;line-height:1.8;color:#766977;margin:12px 38px 0 0}
+.end-banner{padding:0 0 80px;background:#f8eff7}.end-card{position:relative;isolation:isolate;overflow:hidden;display:flex;justify-content:space-between;align-items:center;gap:25px;padding:42px 46px;border-radius:24px;background:var(--plum);color:white}.end-card:before{content:"";position:absolute;z-index:-1;right:22%;top:-290px;width:440px;height:440px;border:1px solid #ffffff20;border-radius:50%;box-shadow:0 0 0 38px #ffffff06,0 0 0 76px #ffffff04}.end-card h2{font:600 clamp(2.5rem,4.5vw,4.7rem)/.94 var(--display);text-transform:uppercase;margin:0 0 12px}.end-card h2 span{color:#ff70b2}.end-card p{font-size:.86rem;color:#dfd0e8;line-height:1.7;margin:0;max-width:570px}.end-card .btn{position:relative;z-index:2;flex:none}
+footer{background:#160621;color:white;padding:38px 0 21px}.footer-top{display:flex;align-items:center;justify-content:space-between;gap:28px;padding-bottom:25px;border-bottom:1px solid #ffffff24}.footer-brand{display:flex;align-items:center;gap:13px}.footer-brand img{width:62px;height:62px;border-radius:11px;background:#fffaf8;object-fit:contain}.footer-brand b{display:block;font:600 1.28rem/1 var(--display);text-transform:uppercase}.footer-brand span{display:block;color:#ff78b4;font-size:.73rem;letter-spacing:.12em;font-weight:850;margin-top:6px}.footer-brand small{display:block;color:#c5b2d0;font-size:.7rem;margin-top:5px}.footer-links{display:flex;flex-wrap:wrap;gap:17px}.footer-links a{font-size:.77rem;font-weight:800;text-decoration:none;color:#ede1f2}.footer-links a:hover{color:#ff85ba}.footer-bottom{display:flex;justify-content:space-between;gap:12px;padding-top:18px;color:#ab97b9;font-size:.68rem}.footer-bottom p{margin:0}
+.wa-float{position:fixed;z-index:80;right:20px;bottom:20px;width:60px;height:60px;display:grid;place-items:center;border:4px solid white;border-radius:50%;background:#19c96b;color:white;text-decoration:none;font-size:1.65rem;box-shadow:0 8px 25px #1707234a;transition:transform .2s}.wa-float:hover{transform:translateY(-4px) scale(1.04)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.reveal.visible{opacity:1;transform:translateY(0)}.delay1{transition-delay:.1s}.delay2{transition-delay:.2s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-10deg)}50%{transform:translateY(-9px) rotate(-7deg)}}@keyframes marquee{to{transform:translateX(-50%)}}
+@media(max-width:980px){.navlinks{gap:16px}.navlinks>a:not(.btn){display:none}.hero-grid{grid-template-columns:.97fr 1.03fr;gap:12px}h1{font-size:clamp(3.5rem,7.5vw,5.9rem)}.hero-photo{height:490px}.hero-strip{grid-template-columns:1fr 1fr}.strip-lead{grid-column:1/-1}.intro-grid{gap:27px}.intro-photo{height:435px}.statement-grid{gap:28px}.coverage-card{grid-template-columns:1fr 1fr}.coverage-copy{padding:30px}.quote-grid{gap:27px}}
+@media(max-width:740px){.wrap{width:calc(100% - 32px)}.microbar{font-size:.64rem;gap:7px}.nav{height:70px}.brand img{width:48px;height:48px}.brandname{font-size:1.02rem}.brandname span{font-size:.72rem}.navlinks>.btn{font-size:.75rem;padding:12px 14px;gap:6px}.hero{padding:29px 0 36px}.hero-grid{grid-template-columns:1fr;gap:19px}.hero-copy{padding:8px 0 0}h1{font-size:clamp(3.6rem,12.8vw,5.5rem);margin:17px 0}.hero-copy>p{font-size:.95rem;line-height:1.7;margin-bottom:19px}.hero-art{margin:0 8px;padding:0 0 25px}.hero-photo{height:470px}.year-stamp{width:90px;height:90px;left:-9px;top:28px}.year-stamp strong{font-size:1.95rem}.year-stamp small{font-size:.51rem}.pink-sticker{right:-8px;max-width:145px;padding:12px}.pink-sticker b{font-size:1.12rem}.photo-copy h2{font-size:3.1rem}.hero-strip{margin-top:15px}.strip-lead{padding:15px}.strip-lead b{font-size:1.12rem}.strip-item{justify-content:flex-start;padding:14px 9px;gap:8px}.strip-item .symbol{font-size:1.2rem}.strip-item strong{font-size:.93rem}.strip-item small{font-size:.62rem}.section{padding:68px 0}.section-head{margin-bottom:30px}.section-head h2{font-size:clamp(2.7rem,9vw,4rem)}.section-head p{font-size:.89rem}.intro-grid{grid-template-columns:1fr;gap:29px}.intro-photo{height:390px}.intro-copy h2{font-size:clamp(3rem,10vw,4.3rem)}.service-grid{grid-template-columns:1fr 1fr;gap:12px}.service-photo{height:185px}.service-info{padding:18px}.service-info h3{font-size:1.48rem}.service-info p{font-size:.79rem}.service-card:last-child{grid-column:1/-1;display:grid;grid-template-columns:.85fr 1.15fr}.service-card:last-child .service-photo{height:100%;min-height:265px}.statement{padding:65px 0}.statement-grid{grid-template-columns:1fr;gap:18px}.statement h2{font-size:clamp(3.4rem,11vw,5.1rem)}.collage{min-height:390px}.collage-big{height:310px;width:78%}.collage-small{height:170px;width:49%}.promo-banner{min-height:415px}.promo-banner>img{object-position:62% center}.promo-banner:before{background:linear-gradient(90deg,#210a36ed 0%,#210a36c5 60%,#210a3650 100%)}.promo-content{padding:32px 26px}.promo-content h2{font-size:clamp(3rem,10vw,4.3rem)}.fleet-head{align-items:flex-start;flex-direction:column;gap:13px}.fleet-head h2{font-size:clamp(2.8rem,9vw,4rem)}.fleet-grid{grid-template-columns:1fr 1fr;gap:12px}.fleet-card{padding:18px}.vehicle-icon{height:76px}.vehicle-icon svg{height:74px}.fleet-card h3{font-size:1.45rem}.fleet-card p{min-height:0;font-size:.78rem}.coverage-card{grid-template-columns:1fr}.coverage-copy{padding:29px 25px}.coverage-copy h2{font-size:3.4rem}.coverage-art{min-height:210px}.quote-grid{grid-template-columns:1fr;gap:28px}.quote-copy{position:static}.quote-copy h2{font-size:clamp(3.5rem,10.5vw,4.7rem)}.benefits{grid-template-columns:1fr 1fr}.quote-form{padding:22px}.faq-grid{grid-template-columns:1fr;gap:18px}.faq-copy h2{font-size:3.4rem}.end-card{align-items:flex-start;flex-direction:column;padding:30px 26px}.end-card .btn{white-space:normal}.footer-top{flex-direction:column;align-items:flex-start}.footer-bottom{flex-direction:column}}
+@media(max-width:480px){.wrap{width:calc(100% - 28px)}.microbar{font-size:.58rem;padding:8px 8px}.nav{height:65px}.brand img{width:42px;height:42px}.brandname{font-size:.9rem}.brandname span{font-size:.65rem}.navlinks>.btn{font-size:.7rem;padding:10px}.hero{padding-top:21px}h1{font-size:clamp(3.05rem,15vw,4.25rem)}.hero-copy>p{font-size:.9rem}.hero-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn{width:100%}.hero-note{font-size:.72rem}.hero-photo{height:420px}.photo-copy{left:16px;right:16px;bottom:18px}.photo-copy h2{font-size:2.7rem}.photo-copy .pill{font-size:.56rem}.year-stamp{width:78px;height:78px}.year-stamp strong{font-size:1.7rem}.pink-sticker{right:-11px;max-width:130px}.hero-strip{border-radius:12px}.strip-lead{grid-column:1/-1}.strip-item{min-height:72px}.strip-item:nth-child(3){border-right:0}.strip-item:nth-child(4){grid-column:1/-1;border-top:1px solid #f1e3e9}.marquee-track{font-size:.84rem;padding:10px 0}.intro-photo{height:340px}.intro-copy h2{font-size:3.15rem}.service-grid{grid-template-columns:1fr}.service-card:last-child{grid-column:auto;display:block}.service-card:last-child .service-photo{height:210px;min-height:0}.service-photo{height:210px}.service-info{padding:20px}.service-info h3{font-size:1.68rem}.statement h2{font-size:3.35rem}.collage{min-height:320px}.collage-big{height:260px;width:83%}.collage-small{height:140px}.collage-stamp{width:94px;height:94px;font-size:1rem}.promo-banner{min-height:450px}.promo-content{padding:26px 20px}.promo-content h2{font-size:3.1rem}.fleet-grid{grid-template-columns:1fr}.fleet-card{padding:21px}.vehicle-icon{height:89px}.vehicle-icon svg{height:88px}.fleet-card h3{font-size:1.7rem}.coverage-copy{padding:25px 21px}.coverage-copy h2{font-size:3.1rem}.coverage-tag{width:215px;padding:18px}.coverage-tag b{font-size:1.7rem}.quote{padding:66px 0}.quote-copy h2{font-size:3.25rem}.benefits{grid-template-columns:1fr}.quote-form{padding:18px 15px;border-radius:18px}.form-head{align-items:flex-start;flex-direction:column}.fields{grid-template-columns:1fr;gap:13px}.field.full{grid-column:auto}.faq-copy h2{font-size:3.1rem}.end-card h2{font-size:2.9rem}.footer-brand img{width:53px;height:53px}.footer-brand b{font-size:1.12rem}.wa-float{width:54px;height:54px;right:13px;bottom:13px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-  <div class="announcement">🚛 <b>Desde 2016</b> — Mudanças com cuidado, respeito e acolhimento.</div>
-  <header>
-    <div class="wrap nav">
-      <a class="logo" href="#inicio" aria-label="Carreto das Minas — início">
-        <img src="./logo.svg" alt="Logotipo Carreto das Minas">
-        <span class="logo-text">Carreto<span>das minas</span></span>
-      </a>
-      <nav class="navlinks" aria-label="Navegação principal">
-        <a href="#servicos">Serviços</a><a href="#nosso-jeito">Nosso jeito</a><a href="#frota">Nossa frota</a>
-        <a class="btn" href="#orcamento">Pedir orçamento <span class="arrow">↗</span></a>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section class="hero" id="inicio">
-      <div class="wrap">
-        <div class="hero-grid">
-          <div class="hero-copy-block">
-            <span class="eyebrow"><span class="dot"></span> Sua mudança. Seu momento. Seu jeito.</span>
-            <h1>Mudar é <span class="pink">começar</span> de novo. <span class="underline">Vamos com você.</span></h1>
-            <p class="hero-copy">Uma mudança vai muito além de levar caixas. É cuidar das histórias que vão com você. <strong>Fazemos isso com respeito, acolhimento e atenção a cada detalhe.</strong></p>
-            <div class="hero-actions"><a class="btn" href="#orcamento">Quero meu orçamento <span class="arrow">↗</span></a><a class="btn line" href="#nosso-jeito">Conheça nosso jeito <span class="arrow">↓</span></a></div>
-            <div class="mini-proof"><span><i>♡</i> Liderança feminina</span><span><i>✦</i> Desde 2016</span><span><i>♧</i> Respeito a quem você é</span></div>
-          </div>
-          <div class="hero-art" aria-label="Ilustração de um caminhão de mudança rosa">
-            <div class="art-badge"><span class="badge-icon">💖</span><span><strong>2016</strong><small>desde lá<br>com cuidado</small></span></div>
-            <div class="art-panel">
-              <div class="art-top"><span class="pill"><span class="heart">♥</span> Carreto das Minas</span><span class="route-word">SP • Brasil</span></div>
-              <div class="truck-illustration">
-                <svg viewBox="0 0 620 390" role="img" aria-label="Caminhão baú com detalhes rosas">
-                  <defs>
-                    <linearGradient id="boxSide" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff7fb"/><stop offset="1" stop-color="#f3ddeb"/></linearGradient>
-                    <linearGradient id="truckPink" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5ca0"/><stop offset="1" stop-color="#dc176e"/></linearGradient>
-                    <linearGradient id="wind" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9f5ff"/><stop offset="1" stop-color="#cab5e0"/></linearGradient>
-                  </defs>
-                  <ellipse cx="319" cy="332" rx="250" ry="21" fill="#10051c" opacity=".22"/>
-                  <g transform="translate(23 20)">
-                    <path d="M45 62Q45 48 60 48H345Q361 48 361 64V267H45Z" fill="url(#boxSide)" stroke="#e1c8dd" stroke-width="3"/>
-                    <path d="M72 75H332V239H72Z" fill="#fbf5f8" stroke="#e8d8e5" stroke-width="2"/>
-                    <path d="M91 93H314" stroke="#e6d2e2" stroke-width="3" stroke-dasharray="8 9"/>
-                    <path d="M91 117H314M91 141H314M91 165H314M91 189H314M91 213H314" stroke="#eadde8" stroke-width="2"/>
-                    <path d="M177 48V267" stroke="#e5d2e1" stroke-width="3"/>
-                    <path d="M45 247H361" stroke="#b994b2" stroke-width="4"/>
-                    <path d="M361 91H390L447 153V267H361Z" fill="url(#truckPink)" stroke="#a9145e" stroke-width="3"/>
-                    <path d="M389 103H411L433 151H389Z" fill="url(#wind)" stroke="#9e155e" stroke-width="3"/>
-                    <path d="M408 175H447V215H408Z" fill="#4b174f"/>
-                    <path d="M373 174H398V215H373Z" fill="#ff9ac5"/>
-                    <path d="M361 228H447V267H361Z" fill="#c81565"/>
-                    <path d="M26 267H463L443 288H42Z" fill="#29102e"/>
-                    <path d="M51 288H457" stroke="#f87eb4" stroke-width="6" stroke-linecap="round"/>
-                    <circle cx="111" cy="289" r="36" fill="#211727"/><circle cx="111" cy="289" r="21" fill="#c7b5ca"/><circle cx="111" cy="289" r="9" fill="#faf0f8"/>
-                    <circle cx="377" cy="289" r="36" fill="#211727"/><circle cx="377" cy="289" r="21" fill="#c7b5ca"/><circle cx="377" cy="289" r="9" fill="#faf0f8"/>
-                    <path d="M218 120c-7-10-23-6-23 7 0 12 23 26 23 26s23-14 23-26c0-13-16-17-23-7Z" fill="#f52d83"/>
-                    <text x="198" y="176" font-family="DM Sans, sans-serif" font-size="21" font-weight="900" fill="#351052" letter-spacing="1">MINAS</text>
-                    <text x="186" y="195" font-family="DM Sans, sans-serif" font-size="10" font-weight="800" fill="#c21968" letter-spacing="2">COM CUIDADO</text>
-                    <path d="M38 263H12V248H38M458 254H475" stroke="#ff8fbd" stroke-width="8" stroke-linecap="round"/>
-                  </g>
-                  <g transform="translate(430 24) rotate(7)">
-                    <path d="M0 28L54 0L111 30L57 60Z" fill="#f8c6dc"/>
-                    <path d="M0 28L0 77L57 109V60Z" fill="#db6ca0"/>
-                    <path d="M57 60L111 30V78L57 109Z" fill="#b6387a"/>
-                    <path d="M31 13L87 44M57 0L57 60" stroke="#fff0f8" stroke-width="4" fill="none"/>
-                  </g>
-                  <g transform="translate(487 117) rotate(-4)">
-                    <path d="M0 20L38 0L78 20L40 42Z" fill="#f8e1ec"/>
-                    <path d="M0 20V58L40 80V42Z" fill="#e2a4c2"/>
-                    <path d="M40 42L78 20V58L40 80Z" fill="#c95b91"/>
-                    <path d="M20 10L59 32M40 0V42" stroke="#fff2f8" stroke-width="3" fill="none"/>
-                  </g>
-                </svg>
-              </div>
-              <div class="route-line"></div>
-            </div>
-            <div class="art-sticker"><b>Não é só transporte.</b><span>É carinho com o que importa. <span class="small-heart">♥</span></span></div>
-          </div>
-        </div>
-        <div class="hero-bottom" aria-label="Informações de atendimento">
-          <div class="hero-bottom-intro"><span class="pin">⌖</span><div><b>De perto ou mais longe.</b><small>A gente combina o caminho com você.</small></div></div>
-          <div class="scope"><span class="ico">🏡</span><div><b>Residenciais</b><small>Mudanças com cuidado</small></div></div>
-          <div class="scope"><span class="ico">📦</span><div><b>Fretes</b><small>Volumes variados</small></div></div>
-          <div class="scope"><span class="ico">🗺️</span><div><b>Interestaduais</b><small>Outros estados</small></div></div>
-        </div>
-      </div>
-    </section>
+<div class="microbar"><i>♥</i> Mudanças com cuidado <strong>desde 2016</strong> · Respeito em cada etapa <i>♥</i></div>
+<header><div class="wrap nav"><a class="brand" href="#inicio" aria-label="Carreto das Minas — início"><img src="./logo.svg" alt="Logotipo Carreto das Minas"><span class="brandname">Carreto<span>das minas</span></span></a><nav class="navlinks" aria-label="Navegação"><a href="#servicos">Serviços</a><a href="#nosso-jeito">Nosso jeito</a><a href="#frota">Frota</a><a class="btn" href="#orcamento">Pedir orçamento <span class="arrow">↗</span></a></nav></div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap">
+<div class="hero-grid">
+<div class="hero-copy"><span class="eyebrow"><i>✳</i> Para mudar de endereço. E de fase.</span><h1>PRECISA<br>FAZER SUA <em>MUDANÇA?</em></h1><p>Tem coisa que vai muito além das caixas. <strong>Seu lar, sua história, seu novo começo.</strong> A gente cuida do transporte com respeito, acolhimento e atenção aos detalhes.</p><div class="hero-actions"><a class="btn" href="#orcamento">Quero meu orçamento <span class="arrow">↗</span></a><a class="btn outline" href="#nosso-jeito">Conheça as Minas <span class="arrow">↓</span></a></div><div class="hero-note"><span class="heart">♥</span><span>Foco em mulheres e público LGBTQIAPN+<small>Liderança feminina · São Paulo e além</small></span></div></div>
+<div class="hero-art"><div class="hero-photo"><img src="https://images.pexels.com/photos/7203853/pexels-photo-7203853.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="Mulher organizando caixas para uma mudança" fetchpriority="high"><div class="photo-copy"><span class="pill">♥ CARRETO DAS MINAS · DESDE 2016</span><h2>Você cuida do novo capítulo. <span>A gente vai junto.</span></h2></div></div><div class="year-stamp"><strong>2016</strong><small>desde lá<br>com cuidado</small></div><div class="pink-sticker"><b>Não é só transporte.</b><small>É carinho com o que tem valor pra você. ♥</small></div></div>
+</div>
+<div class="hero-strip"><div class="strip-lead"><span class="pin">⌖</span><div><b>Pra onde você vai?</b><small>Vamos planejar esse caminho.</small></div></div><div class="strip-item"><span class="symbol">⌂</span><div><strong>Residenciais</strong><small>Seu lar em boas mãos</small></div></div><div class="strip-item"><span class="symbol">▧</span><div><strong>Fretes</strong><small>Do item à mudança</small></div></div><div class="strip-item"><span class="symbol">↗</span><div><strong>Interestaduais</strong><small>SP e outros estados</small></div></div></div>
+</div></section>
+<div class="marquee" aria-label="Carreto das Minas: mudanças com cuidado, respeito e acolhimento"><div class="marquee-track" aria-hidden="true"><span>Vai mudar? Vai com as Minas <i>♥</i> Respeito em cada etapa <i>✳</i> Sua mudança, nossa missão <i>♥</i> Desde 2016 <i>✳</i> Vai mudar? Vai com as Minas <i>♥</i> Respeito em cada etapa <i>✳</i> Sua mudança, nossa missão <i>♥</i> Desde 2016 <i>✳</i></span><span>Vai mudar? Vai com as Minas <i>♥</i> Respeito em cada etapa <i>✳</i> Sua mudança, nossa missão <i>♥</i> Desde 2016 <i>✳</i> Vai mudar? Vai com as Minas <i>♥</i> Respeito em cada etapa <i>✳</i> Sua mudança, nossa missão <i>♥</i> Desde 2016 <i>✳</i></span></div></div>
+<section class="section" id="nosso-jeito"><div class="wrap intro-grid"><div class="intro-picture reveal"><div class="intro-photo"><img src="https://images.pexels.com/photos/7464466/pexels-photo-7464466.jpeg?auto=compress&amp;dpr=1&amp;h=900&amp;w=1200" alt="Preparação cuidadosa de caixas antes da mudança" loading="lazy"><div class="photo-caption">CADA MUDANÇA TEM UMA HISTÓRIA. A SUA MERECE RESPEITO.</div></div><div class="tape-sticker">Seu jeito<br>importa! ♥</div></div><div class="intro-copy reveal delay1"><span class="eyebrow">✳ Nossa história, nosso jeito</span><h2>SEU LUGAR NO MUNDO. <em>SEU JEITO DE CHEGAR.</em></h2><p>O Carreto das Minas nasceu para fazer mudanças com cuidado — e acredita que o respeito precisa vir junto no caminhão.</p><p>Desde 2016, a marca tem foco no atendimento a mulheres e ao público LGBTQIAPN+, com liderança feminina e compromisso em tratar cada pessoa com dignidade.</p><div class="value-points"><div class="value-point"><i>✓</i><span><b>Respeito sem negociação</b><small>Você merece se sentir à vontade do primeiro contato à entrega.</small></span></div><div class="value-point"><i>✓</i><span><b>Cuidado com o que é seu</b><small>Informações bem combinadas ajudam a organizar o transporte.</small></span></div><div class="value-point"><i>✓</i><span><b>Conversa direta e acolhedora</b><small>Conte sua necessidade. A equipe recebe os detalhes pelo WhatsApp.</small></span></div></div></div></div></section>
+<section class="section services" id="servicos"><div class="wrap"><div class="section-head reveal"><span class="eyebrow">✳ Qual é a sua mudança?</span><h2>UM MONTE DE COISAS.<br><em>UM NOVO COMEÇO.</em></h2><p>Do transporte de alguns itens à mudança residencial. Diga o que precisa levar e para onde — o orçamento começa com esses detalhes.</p></div><div class="service-grid">
+<article class="service-card reveal"><div class="service-photo"><img src="https://images.pexels.com/photos/7203853/pexels-photo-7203853.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="Caixas sendo preparadas para mudança residencial" loading="lazy"><span class="number">01</span></div><div class="service-info"><h3>Mudanças residenciais</h3><p>Vai trocar de casa, apartamento ou começar vida num lugar novo? Conte sobre os móveis, os acessos e os endereços.</p><a class="textlink" href="#orcamento">Planejar minha mudança <span>↗</span></a></div></article>
+<article class="service-card reveal delay1"><div class="service-photo"><img src="https://images.pexels.com/photos/20706506/pexels-photo-20706506/free-photo-of-man-carrying-boxes-on-trolleys.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="Volumes sendo movimentados para transporte" loading="lazy"><span class="number">02</span></div><div class="service-info"><h3>Fretes e itens avulsos</h3><p>Um móvel, eletrodomésticos, caixas ou alguns objetos? Informe a lista para a equipe avaliar o volume e o veículo.</p><a class="textlink" href="#orcamento">Solicitar um frete <span>↗</span></a></div></article>
+<article class="service-card reveal delay2"><div class="service-photo"><img src="https://images.pexels.com/photos/4245989/pexels-photo-4245989.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="Preparativos para levar pertences a um novo endereço" loading="lazy"><span class="number">03</span></div><div class="service-info"><h3>Entre cidades e estados</h3><p>Vai para outra cidade ou estado? Informe a origem, o destino e os itens para que a equipe avalie sua rota.</p><a class="textlink" href="#orcamento">Consultar minha rota <span>↗</span></a></div></article>
+</div></div></section>
+<section class="statement"><div class="wrap statement-grid"><div class="reveal"><span class="eyebrow">♥ Nosso compromisso</span><h2>NÃO É SÓ<br>LEVAR CAIXAS.<br><em>É LEVAR RESPEITO.</em></h2><p>Uma mudança já traz novidades suficientes. O atendimento não precisa trazer desconforto. Aqui, o cuidado começa na conversa — porque acolhimento também faz parte do caminho.</p><a class="btn yellow" href="#orcamento">Vamos conversar? <span class="arrow">↗</span></a><p class="credits">Fotos ilustrativas de acervo gratuito do Pexels. Não representam necessariamente a equipe ou a frota da empresa.</p></div><div class="collage reveal delay1"><div class="collage-big"><img src="https://images.pexels.com/photos/20706506/pexels-photo-20706506/free-photo-of-man-carrying-boxes-on-trolleys.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="Preparação de volumes para transporte" loading="lazy"></div><div class="collage-small"><img src="https://images.pexels.com/photos/7464466/pexels-photo-7464466.jpeg?auto=compress&amp;dpr=1&amp;h=900&amp;w=1200" alt="Caixas organizadas para uma mudança" loading="lazy"></div><div class="collage-stamp">Seu novo<br>capítulo<br>começa aqui ♥</div></div></div></section>
+<section class="promo"><div class="wrap"><div class="promo-banner reveal"><img src="https://images.pexels.com/photos/20706506/pexels-photo-20706506/free-photo-of-man-carrying-boxes-on-trolleys.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="" loading="lazy"><div class="promo-content"><span class="eyebrow">✳ Um passo de cada vez</span><h2>VOCÊ CUIDA<br>DO NOVO CAPÍTULO.<br><span>A GENTE VAI JUNTO.</span></h2><p>Conte para nós o que precisa transportar. Organize os detalhes com calma e envie sua solicitação de orçamento sem compromisso.</p><a class="btn yellow" href="#orcamento">Começar meu orçamento <span class="arrow">↗</span></a></div></div></div></section>
+<section class="section fleet" id="frota"><div class="wrap"><div class="fleet-head reveal"><div><span class="eyebrow">✳ Nossa frota</span><h2>O TAMANHO CERTO<br><em>PARA CADA ROTA.</em></h2></div><p>A frota conta com opções diferentes para que a avaliação considere o volume e as necessidades da sua mudança. Não sabe qual escolher? A equipe pode orientar.</p></div><div class="fleet-grid">
+<article class="fleet-card reveal"><span class="fleet-n">01</span><div class="vehicle-icon" aria-hidden="true"><svg viewBox="0 0 250 105"><path d="M17 67l12-28q4-9 16-9h72q11 0 18 10l17 27h43l30 18v13H17z" fill="#f32b83" stroke="#210a36" stroke-width="3" stroke-linejoin="round"/><path d="M48 36h35v29H35zM90 36h26q10 0 16 13l8 16H90z" fill="#f6dfe9" stroke="#210a36" stroke-width="2"/><path d="M149 67h47l24 18h-71z" fill="#ce1768"/><circle cx="61" cy="91" r="15" fill="#210a36"/><circle cx="61" cy="91" r="7" fill="#fff"/><circle cx="177" cy="91" r="15" fill="#210a36"/><circle cx="177" cy="91" r="7" fill="#fff"/><path d="M22 73h12M204 75h18" stroke="#f9eb4b" stroke-width="4"/></svg></div><h3>Picape</h3><p>Ideal para fretes menores e rápidos, de acordo com o tipo e o volume dos itens.</p><a href="#orcamento">Pedir orçamento ↗</a></article>
+<article class="fleet-card reveal delay1"><span class="fleet-n">02</span><div class="vehicle-icon" aria-hidden="true"><svg viewBox="0 0 250 105"><path d="M17 20h143v66H17z" fill="#f8edf4" stroke="#210a36" stroke-width="3"/><path d="M160 49h30l34 27v16h-64z" fill="#f32b83" stroke="#210a36" stroke-width="3" stroke-linejoin="round"/><path d="M184 54h9l22 20h-31z" fill="#dcebf2" stroke="#210a36" stroke-width="2"/><path d="M28 32h122M28 43h122M28 54h122M28 65h122" stroke="#e6c9db" stroke-width="2"/><path d="M17 86h207" stroke="#ce1768" stroke-width="4"/><circle cx="63" cy="91" r="14" fill="#210a36"/><circle cx="63" cy="91" r="6" fill="#fff"/><circle cx="188" cy="91" r="14" fill="#210a36"/><circle cx="188" cy="91" r="6" fill="#fff"/></svg></div><h3>HR baú</h3><p>Uma opção versátil para mudanças residenciais e comerciais de diferentes tamanhos.</p><a href="#orcamento">Pedir orçamento ↗</a></article>
+<article class="fleet-card reveal delay2"><span class="fleet-n">03</span><div class="vehicle-icon" aria-hidden="true"><svg viewBox="0 0 250 105"><path d="M8 14h153v72H8z" fill="#f8edf4" stroke="#210a36" stroke-width="3"/><path d="M161 43h32q9 0 14 10l23 24v13h-69z" fill="#fff0f6" stroke="#210a36" stroke-width="3" stroke-linejoin="round"/><path d="M190 48h8l19 24h-27z" fill="#dcebf2" stroke="#210a36" stroke-width="2"/><path d="M19 26h130M19 39h130M19 52h130M19 65h130" stroke="#e6c9db" stroke-width="2"/><path d="M8 86h222" stroke="#ce1768" stroke-width="4"/><circle cx="55" cy="91" r="14" fill="#210a36"/><circle cx="55" cy="91" r="6" fill="#fff"/><circle cx="196" cy="91" r="14" fill="#210a36"/><circle cx="196" cy="91" r="6" fill="#fff"/></svg></div><h3>Iveco Daily baú</h3><p>Mais espaço para transportar volumes maiores, conforme a avaliação do serviço.</p><a href="#orcamento">Pedir orçamento ↗</a></article>
+</div></div></section>
+<section class="coverage"><div class="wrap"><div class="coverage-card reveal"><div class="coverage-copy"><span class="eyebrow">✳ De perto ou mais longe</span><h2>SÃO PAULO.<br>GRANDE SP.<br>E OUTROS ESTADOS.</h2><p>Informe os endereços de retirada e entrega. A equipe avalia as informações e conversa com você sobre a rota.</p></div><div class="coverage-art" aria-hidden="true"><svg viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="5 8"><path d="M-20 60C90 10 95 155 195 117S350 27 525 91"/><path d="M-20 250C98 180 165 295 245 218S393 115 520 180"/><path d="M80 -20C150 90 225 27 290 118S330 253 405 330"/><path d="M315 -20C265 69 406 92 366 183S455 240 460 330"/></g><path d="M95 87C162 72 200 161 245 218S323 218 366 183" fill="none" stroke="#f9eb4b" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 9"/><g transform="translate(79 46)"><path d="M0 0c-12 0-21 9-21 21 0 15 21 34 21 34S21 36 21 21C21 9 12 0 0 0z" fill="#f9eb4b"/><circle cy="21" r="6" fill="#210a36"/></g><g transform="translate(366 150)"><path d="M0 0c-12 0-21 9-21 21 0 15 21 34 21 34S21 36 21 21C21 9 12 0 0 0z" fill="#fff"/><circle cy="21" r="6" fill="#cf1768"/></g></svg><div class="coverage-tag"><b>SP → Brasil</b><span>O próximo destino pode ser o seu.</span></div></div></div></div></section>
+<section class="quote" id="orcamento"><div class="wrap quote-grid"><div class="quote-copy reveal"><span class="eyebrow">✳ Vamos tirar isso do papel?</span><h2>SEU ORÇAMENTO <em>COMEÇA AQUI.</em></h2><p>Preencha os dados que já tem em mãos. A mensagem será montada para o WhatsApp, onde você poderá revisar e enviar à equipe.</p><div class="benefits"><div class="benefit"><i>✓</i><span>Orçamento sem compromisso.</span></div><div class="benefit"><i>✓</i><span>Informações organizadas em uma só mensagem.</span></div><div class="benefit"><i>✓</i><span>Você pode anexar fotos depois de abrir o WhatsApp.</span></div></div><div class="contact"><span class="wa">●</span><div><b>Carreto das Minas no WhatsApp</b><small>(11) 99380-6243 · toque para conversar</small></div></div></div>
+<form class="quote-form reveal delay1" id="quote-form"><div class="form-head"><h3>Me conta da mudança</h3><span>Orçamento · 01</span></div><div class="fields">
+<div class="field full"><label for="name">Seu nome <span class="req">*</span></label><input id="name" name="name" autocomplete="name" placeholder="Como podemos te chamar?" required></div>
+<div class="field"><label for="phone">Seu telefone</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999"></div>
+<div class="field"><label for="date">Data desejada</label><input id="date" name="date" type="date"></div>
+<div class="field full"><label for="items">Lista de itens para transportar <span class="req">*</span></label><textarea id="items" name="items" placeholder="Ex.: sofá, cama, geladeira, caixas..." required></textarea><p class="hint">Inclua a quantidade aproximada de móveis, caixas e eletrodomésticos.</p></div>
+<div class="field full"><label for="pickup">Endereço de retirada <span class="req">*</span></label><input id="pickup" name="pickup" autocomplete="street-address" placeholder="Rua, número, bairro e cidade" required></div>
+<div class="field full"><label for="delivery">Endereço de entrega <span class="req">*</span></label><input id="delivery" name="delivery" placeholder="Rua, número, bairro e cidade" required></div>
+<div class="field"><label for="pickup-type">Retirada: tipo de local <span class="req">*</span></label><select id="pickup-type" name="pickup-type" required><option value="">Selecione</option><option>Casa térrea</option><option>Casa com escadas</option><option>Prédio com elevador</option><option>Prédio sem elevador</option><option>Comercial</option><option>Outro</option></select></div>
+<div class="field"><label for="delivery-type">Entrega: tipo de local <span class="req">*</span></label><select id="delivery-type" name="delivery-type" required><option value="">Selecione</option><option>Casa térrea</option><option>Casa com escadas</option><option>Prédio com elevador</option><option>Prédio sem elevador</option><option>Comercial</option><option>Outro</option></select></div>
+<div class="field full"><label for="access">Escadas, elevadores e acesso</label><input id="access" name="access" placeholder="Andares, elevador pequeno, acesso difícil..."></div>
+<div class="field"><label for="vehicle">Tipo de veículo</label><select id="vehicle" name="vehicle"><option>Preciso de orientação</option><option>Picape</option><option>HR baú</option><option>Iveco Daily baú</option></select></div>
+<div class="field"><label for="assembly">Montagem / desmontagem</label><select id="assembly" name="assembly"><option>Não</option><option>Sim</option><option>Preciso avaliar</option></select></div>
+<div class="field full"><label for="packing">Embalagem especial?</label><select id="packing" name="packing"><option>Não</option><option>Sim</option><option>Preciso avaliar</option></select></div>
+<div class="field full"><label for="details">Outros detalhes</label><textarea id="details" name="details" placeholder="Itens frágeis, observações, data flexível..."></textarea></div>
+<div class="field full"><label class="consent"><input type="checkbox" id="consent" name="consent" required><span>Confirmo que as informações estão corretas e autorizo o uso desses dados para responder à solicitação de orçamento.</span></label></div></div><button class="btn submit" type="submit">Preparar mensagem no WhatsApp <span class="arrow">↗</span></button><p class="fineprint">O WhatsApp abre com a mensagem pronta. Você poderá revisar e enviar por lá.</p><p id="form-status" role="status" aria-live="polite"></p></form>
+</div></section>
+<section class="faq"><div class="wrap faq-grid"><div class="faq-copy reveal"><span class="eyebrow">✳ Antes de enviar</span><h2>DÚVIDAS? <em>SEM NEURA.</em></h2><p>Se não souber algum detalhe, informe o que já tem. A equipe pode continuar a conversa com você pelo WhatsApp.</p><a class="btn dark" href="https://wa.me/5511993806243?text=Ol%C3%A1%2C%20Carreto%20das%20Minas!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20or%C3%A7amento." target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp ↗</a></div><div class="faq-list reveal delay1"><details><summary>Quais regiões vocês atendem?</summary><p>O atendimento inclui Grande São Paulo e viagens para outros estados. Informe os endereços para a equipe avaliar a rota.</p></details><details><summary>Como o orçamento é calculado?</summary><p>A avaliação considera a lista e o volume dos itens, os endereços, o veículo e as condições de retirada e entrega.</p></details><details><summary>Posso mandar fotos dos móveis?</summary><p>Sim. Depois de abrir o WhatsApp com a mensagem preparada, você pode anexar fotos antes de enviar a solicitação.</p></details><details><summary>Escadas e elevadores podem mudar o valor?</summary><p>Essas condições podem influenciar o orçamento. Informe os andares, a presença de elevador e os itens que não passam por ele.</p></details><details><summary>Preciso saber qual veículo contratar?</summary><p>Não. Se não souber, selecione “Preciso de orientação” e descreva os itens. A equipe poderá avaliar a opção mais adequada.</p></details></div></div></section>
+<section class="end-banner"><div class="wrap"><div class="end-card reveal"><div><h2>VAI MUDAR?<br><span>VAI COM AS MINAS.</span></h2><p>Desde 2016, mudanças com cuidado, liderança feminina e respeito a quem você é.</p></div><a class="btn yellow" href="#orcamento">Solicitar orçamento <span class="arrow">↗</span></a></div></div></section>
+</main>
+<footer><div class="wrap"><div class="footer-top"><div class="footer-brand"><img src="./logo.svg" alt=""><div><b>Carreto das Minas</b><span>SUA MUDANÇA, NOSSA MISSÃO ♥</span><small>Grande São Paulo · Outros estados · Desde 2016</small></div></div><nav class="footer-links" aria-label="Links do rodapé"><a href="#servicos">Serviços</a><a href="#nosso-jeito">Nossa história</a><a href="#frota">Nossa frota</a><a href="https://www.instagram.com/carretodasminas/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://wa.me/5511993806243" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></nav></div><div class="footer-bottom"><p>© <span id="year"></span> Carreto das Minas. Todos os direitos reservados.</p><p>Fotos ilustrativas: Pexels. As imagens não representam necessariamente a equipe ou frota.</p></div></div></footer>
+<a class="wa-float" href="https://wa.me/5511993806243" target="_blank" rel="noopener noreferrer" aria-label="Conversar com Carreto das Minas pelo WhatsApp">◉</a>
+<script>
+(() => {
+  const number = '5511993806243';
+  const form = document.getElementById('quote-form');
+  const status = document.getElementById('form-status');
+  document.getElementById('year').textContent = String(new Date().getFullYear());
+  const date = document.getElementById('date');
+  const now = new Date();
+  date.min = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0,10);
 
-    <section class="section services" id="servicos">
-      <div class="wrap">
-        <div class="section-head"><span class="eyebrow"><span class="dot"></span> De uma caixa a uma casa inteira</span><h2>Seu plano muda.<br><em>O cuidado fica.</em></h2><p>Conta para a gente o que você precisa transportar. Vamos entender os detalhes e encontrar o melhor caminho para sua mudança.</p></div>
-        <div class="service-grid">
-          <article class="service-card"><span class="service-no">01</span><div class="service-icon">🏡</div><h3>Mudanças residenciais</h3><p>Para sair de um lar e começar a montar outro — com atenção aos móveis, aos objetos e ao que cada um representa.</p><a class="service-link" href="#orcamento">Planejar minha mudança <span>↗</span></a></article>
-          <article class="service-card"><span class="service-no">02</span><div class="service-icon">📦</div><h3>Fretes e pequenos volumes</h3><p>Precisa levar alguns itens, um móvel ou eletrodomésticos? Conte o que vai transportar e onde precisa chegar.</p><a class="service-link" href="#orcamento">Pedir um frete <span>↗</span></a></article>
-          <article class="service-card"><span class="service-no">03</span><div class="service-icon">🛣️</div><h3>Viagens entre cidades</h3><p>Atendimento em São Paulo, Grande São Paulo e rotas para outros estados. Informe origem e destino para avaliar sua solicitação.</p><a class="service-link" href="#orcamento">Consultar minha rota <span>↗</span></a></article>
-        </div>
-      </div>
-    </section>
+  const revealNodes = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); } });
+    }, {threshold:.12, rootMargin:'0px 0px -35px 0px'});
+    revealNodes.forEach(node => observer.observe(node));
+  } else {
+    revealNodes.forEach(node => node.classList.add('visible'));
+  }
 
-    <section class="section values" id="nosso-jeito">
-      <div class="wrap values-grid">
-        <div class="values-title"><span class="eyebrow"><span class="dot"></span> Nossa história, nosso jeito</span><h2>Você merece chegar <em>como é.</em></h2><p>Desde 2016, o Carreto das Minas leva mais do que pertences: leva compromisso com um atendimento respeitoso, próximo e sem julgamentos.</p><p class="values-quote">“Sua mudança, nossa missão.”<br>Um espaço novo começa melhor quando você se sente respeitada desde o primeiro contato.</p></div>
-        <div class="value-list">
-          <article class="value-item"><span class="value-icon">💖</span><h3>Feito com cuidado</h3><p>Atenção com os detalhes da sua mudança e com aquilo que é importante para você.</p></article>
-          <article class="value-item"><span class="value-icon">♀️</span><h3>Liderança feminina</h3><p>Uma marca que valoriza a presença e a força das mulheres no transporte.</p></article>
-          <article class="value-item"><span class="value-icon">🏳️‍🌈</span><h3>Respeito à diversidade</h3><p>Foco em mulheres e no público LGBTQIAPN+, com acolhimento e respeito a quem você é.</p></article>
-          <article class="value-item"><span class="value-icon">🤝</span><h3>Compromisso de verdade</h3><p>Informações claras e conversa direta para combinar os detalhes do serviço.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section fleet" id="frota">
-      <div class="wrap">
-        <div class="section-head"><span class="eyebrow"><span class="dot"></span> Nossa frota</span><h2>O tamanho certo<br>para <em>cada mudança.</em></h2><p>As necessidades mudam de cliente para cliente. Por isso, a frota conta com opções para diferentes volumes de transporte.</p></div>
-        <div class="fleet-grid">
-          <article class="vehicle">
-            <div class="vehicle-art">
-              <svg viewBox="0 0 380 190" aria-label="Ilustração de uma picape vermelha" role="img">
-                <ellipse cx="190" cy="160" rx="151" ry="12" fill="#371631" opacity=".17"/>
-                <path d="M38 113L56 75Q62 62 80 62H205Q222 62 231 80L250 114H291L320 132V151H39Z" fill="#d81742" stroke="#6d0d28" stroke-width="3" stroke-linejoin="round"/>
-                <path d="M79 69H145V111H55Z" fill="#b9d7e8" stroke="#6d0d28" stroke-width="3"/>
-                <path d="M153 69H202Q214 69 221 84L237 111H153Z" fill="#dceaf2" stroke="#6d0d28" stroke-width="3"/>
-                <path d="M245 115H292L314 132H248Z" fill="#f64d6d" stroke="#6d0d28" stroke-width="3"/>
-                <path d="M41 121H251" stroke="#ffb1c0" stroke-width="5"/>
-                <path d="M60 130H91M253 130H285" stroke="#75102a" stroke-width="4"/>
-                <rect x="44" y="135" width="25" height="12" rx="4" fill="#ffedb2"/><rect x="294" y="138" width="15" height="9" rx="3" fill="#f7a2ab"/>
-                <circle cx="104" cy="149" r="25" fill="#221a25"/><circle cx="104" cy="149" r="13" fill="#d6ccd8"/><circle cx="104" cy="149" r="5" fill="#fff"/>
-                <circle cx="264" cy="149" r="25" fill="#221a25"/><circle cx="264" cy="149" r="13" fill="#d6ccd8"/><circle cx="264" cy="149" r="5" fill="#fff"/>
-                <path d="M153 70V112M236 113L251 123" stroke="#fff2f5" stroke-width="2"/>
-                <path d="M172 89H205" stroke="#e5b2c1" stroke-width="2"/>
-              </svg>
-            </div>
-            <div class="vehicle-content"><h3 class="vehicle-type">Picape</h3><p>Ideal para fretes menores e rápidos, conforme o volume e os itens informados.</p><div class="vehicle-bottom"><span>Fretes menores</span><a class="round-arrow" href="#orcamento" aria-label="Solicitar orçamento para picape">↗</a></div></div>
-          </article>
-          <article class="vehicle">
-            <div class="vehicle-art">
-              <svg viewBox="0 0 380 190" aria-label="Ilustração de um caminhão HR baú branco" role="img">
-                <ellipse cx="190" cy="160" rx="151" ry="12" fill="#371631" opacity=".17"/>
-                <path d="M42 35H252Q260 35 260 44V143H42Z" fill="#fff" stroke="#b9a9bd" stroke-width="3"/>
-                <path d="M252 93H290L329 127V150H252Z" fill="#fdf8fc" stroke="#9c8ba0" stroke-width="3" stroke-linejoin="round"/>
-                <path d="M286 100H298L316 123H286Z" fill="#bbd8e8" stroke="#9c8ba0" stroke-width="2"/>
-                <path d="M42 143H329V154H42Z" fill="#d9cbdc"/>
-                <path d="M60 51H238V128H60Z" fill="#fbf4fa" stroke="#e1d2e3" stroke-width="2"/>
-                <path d="M74 67H223M74 84H223M74 101H223" stroke="#e8dce9" stroke-width="2"/>
-                <path d="M49 130H260" stroke="#d6c2d8" stroke-width="3"/>
-                <path d="M260 143H328" stroke="#f52d83" stroke-width="5"/>
-                <rect x="278" y="132" width="18" height="10" rx="3" fill="#f6c2d9"/>
-                <circle cx="103" cy="151" r="24" fill="#211727"/><circle cx="103" cy="151" r="12" fill="#d5cbd7"/><circle cx="103" cy="151" r="5" fill="#fff"/>
-                <circle cx="289" cy="151" r="24" fill="#211727"/><circle cx="289" cy="151" r="12" fill="#d5cbd7"/><circle cx="289" cy="151" r="5" fill="#fff"/>
-                <path d="M260 45H275" stroke="#f52d83" stroke-width="4"/>
-              </svg>
-            </div>
-            <div class="vehicle-content"><h3 class="vehicle-type">HR baú</h3><p>Uma opção versátil para mudanças residenciais e comerciais de diferentes tamanhos.</p><div class="vehicle-bottom"><span>Mudanças e fretes</span><a class="round-arrow" href="#orcamento" aria-label="Solicitar orçamento para HR baú">↗</a></div></div>
-          </article>
-          <article class="vehicle">
-            <div class="vehicle-art">
-              <svg viewBox="0 0 380 190" aria-label="Ilustração de um caminhão Iveco Daily baú branco" role="img">
-                <ellipse cx="190" cy="160" rx="151" ry="12" fill="#371631" opacity=".17"/>
-                <path d="M34 26H252Q261 26 261 36V143H34Z" fill="#fff" stroke="#aca0b3" stroke-width="3"/>
-                <path d="M261 77H294Q305 77 311 89L338 127V150H261Z" fill="#fff" stroke="#938398" stroke-width="3" stroke-linejoin="round"/>
-                <path d="M289 86H297L323 121H289Z" fill="#b9d8e7" stroke="#938398" stroke-width="2"/>
-                <path d="M34 143H338V154H34Z" fill="#d9cbdc"/>
-                <path d="M47 40H247V127H47Z" fill="#faf5fa" stroke="#e1d2e3" stroke-width="2"/>
-                <path d="M61 56H233M61 73H233M61 90H233" stroke="#e8dce9" stroke-width="2"/>
-                <path d="M266 112H328" stroke="#f52d83" stroke-width="5"/>
-                <path d="M265 130H286V141H265Z" fill="#f5c4d9"/>
-                <circle cx="93" cy="151" r="24" fill="#211727"/><circle cx="93" cy="151" r="12" fill="#d5cbd7"/><circle cx="93" cy="151" r="5" fill="#fff"/>
-                <circle cx="300" cy="151" r="24" fill="#211727"/><circle cx="300" cy="151" r="12" fill="#d5cbd7"/><circle cx="300" cy="151" r="5" fill="#fff"/>
-                <path d="M261 86H278" stroke="#f52d83" stroke-width="3"/>
-              </svg>
-            </div>
-            <div class="vehicle-content"><h3 class="vehicle-type">Iveco Daily baú</h3><p>Mais espaço para transportes com maior volume e mudanças que exigem planejamento.</p><div class="vehicle-bottom"><span>Volumes maiores</span><a class="round-arrow" href="#orcamento" aria-label="Solicitar orçamento para Iveco Daily baú">↗</a></div></div>
-          </article>
-        </div>
-        <p class="fleet-note"><strong>Não sabe qual veículo escolher?</strong> Sem problema: descreva os itens no formulário e a equipe poderá orientar você.</p>
-      </div>
-    </section>
-
-    <section class="section process" id="como-funciona">
-      <div class="wrap">
-        <div class="section-head"><span class="eyebrow"><span class="dot"></span> Sem complicação</span><h2>Três passos para<br><em>tirar do papel.</em></h2><p>A primeira etapa é reunir as informações certas. Assim, a conversa sobre seu orçamento começa mais organizada.</p></div>
-        <div class="process-grid">
-          <article class="process-card"><h3>Você conta</h3><p>Informe os itens, os endereços de retirada e entrega e detalhes como escadas, elevador e montagem.</p></article>
-          <article class="process-card"><h3>A gente recebe</h3><p>Ao enviar o formulário, o WhatsApp abre com sua solicitação organizada para você revisar.</p></article>
-          <article class="process-card"><h3>Combinamos</h3><p>A equipe recebe sua mensagem e conversa com você para avaliar os detalhes do serviço.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="form-section" id="orcamento">
-      <div class="wrap form-layout">
-        <div class="form-intro">
-          <span class="eyebrow"><span class="dot"></span> Vamos conversar</span>
-          <h2>Seu orçamento começa <em>aqui.</em></h2>
-          <p>Preencha o que já sabe. Esses detalhes ajudam a equipe a entender o volume e as condições do transporte.</p>
-          <div class="form-points"><div class="form-point"><span class="tick">✓</span><span>Sem compromisso de contratação.</span></div><div class="form-point"><span class="tick">✓</span><span>Suas respostas vão organizadas para o WhatsApp.</span></div><div class="form-point"><span class="tick">✓</span><span>Você pode anexar fotos na conversa.</span></div></div>
-          <div class="whatsapp-number"><span class="wa">💬</span><div><strong>Fale com o Carreto das Minas</strong><small>(11) 99380-6243 · WhatsApp</small></div></div>
-        </div>
-        <form id="quote-form">
-          <div class="form-heading"><h3>Me conta da mudança</h3><span>● ORÇAMENTO</span></div>
-          <div class="fields">
-            <div class="field full"><label for="name">Seu nome <span class="required">*</span></label><input id="name" name="name" autocomplete="name" placeholder="Como podemos te chamar?" required></div>
-            <div class="field"><label for="phone">Seu telefone</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999"></div>
-            <div class="field"><label for="date">Data desejada</label><input id="date" name="date" type="date"></div>
-            <div class="field full"><label for="items">Lista de itens para transportar <span class="required">*</span></label><textarea id="items" name="items" placeholder="Ex.: sofá, cama, geladeira, caixas, mesa..." required></textarea><p class="hint">Se souber, informe quantidades e tamanhos aproximados.</p></div>
-            <div class="field full"><label for="pickup">Endereço de retirada <span class="required">*</span></label><input id="pickup" name="pickup" autocomplete="street-address" placeholder="Rua, número, bairro e cidade" required></div>
-            <div class="field full"><label for="delivery">Endereço de entrega <span class="required">*</span></label><input id="delivery" name="delivery" placeholder="Rua, número, bairro e cidade" required></div>
-            <div class="field"><label for="pickup-type">Retirada: tipo de local <span class="required">*</span></label><select id="pickup-type" name="pickup-type" required><option value="">Selecione</option><option>Casa térrea</option><option>Casa com escadas</option><option>Prédio com elevador</option><option>Prédio sem elevador</option><option>Comercial</option><option>Outro</option></select></div>
-            <div class="field"><label for="delivery-type">Entrega: tipo de local <span class="required">*</span></label><select id="delivery-type" name="delivery-type" required><option value="">Selecione</option><option>Casa térrea</option><option>Casa com escadas</option><option>Prédio com elevador</option><option>Prédio sem elevador</option><option>Comercial</option><option>Outro</option></select></div>
-            <div class="field full"><label for="access">Escadas, elevadores e acesso</label><input id="access" name="access" placeholder="Andares, elevador pequeno, acesso difícil etc."></div>
-            <div class="field"><label for="vehicle">Tipo de veículo</label><select id="vehicle" name="vehicle"><option>Preciso de orientação</option><option>Picape</option><option>HR baú</option><option>Iveco Daily baú</option></select></div>
-            <div class="field"><label for="assembly">Desmontar ou montar móveis?</label><select id="assembly" name="assembly"><option>Não</option><option>Sim</option><option>Preciso avaliar</option></select></div>
-            <div class="field"><label for="packing">Embalagem especial?</label><select id="packing" name="packing"><option>Não</option><option>Sim</option><option>Preciso avaliar</option></select></div>
-            <div class="field full"><label for="details">Outros detalhes</label><textarea id="details" name="details" placeholder="Itens frágeis, observações, data flexível ou algo que a equipe precisa saber"></textarea></div>
-            <div class="field full"><label class="checkbox"><input type="checkbox" name="confirm" id="confirm" required><span>Confirmo que as informações são verdadeiras e autorizo o uso dos dados para responder à minha solicitação de orçamento.</span></label></div>
-          </div>
-          <button class="btn submit" type="submit">Preparar mensagem no WhatsApp <span class="arrow">↗</span></button>
-          <p class="fineprint">O WhatsApp será aberto com a mensagem pronta. Você poderá revisar tudo e enviar por lá.</p><p id="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-
-    <section class="section faq" id="duvidas">
-      <div class="wrap faq-grid">
-        <div class="faq-title"><span class="eyebrow"><span class="dot"></span> Antes de chamar</span><h2>Tem dúvida?<br><em>Vamos resolver.</em></h2><p>Se ainda não tiver todos os detalhes, envie as informações que já tem. A equipe pode orientar os próximos passos pelo WhatsApp.</p><a class="btn dark" href="https://wa.me/5511993806243?text=Ol%C3%A1%2C%20Carreto%20das%20Minas!%20Tenho%20uma%20d%C3%BAvida%20sobre%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer">Perguntar pelo WhatsApp <span class="arrow">↗</span></a></div>
-        <div class="faq-list">
-          <details><summary>Quais regiões vocês atendem?</summary><p>O atendimento inclui a cidade de São Paulo, Grande São Paulo e transporte para outros estados. Informe os endereços no formulário para a equipe avaliar sua rota.</p></details>
-          <details><summary>Como o valor do orçamento é calculado?</summary><p>O orçamento considera os itens e o volume informado, os endereços e as condições de retirada e entrega. A equipe avalia os detalhes para orientar você.</p></details>
-          <details><summary>E se eu não souber qual veículo escolher?</summary><p>Selecione “Preciso de orientação” no formulário e descreva os itens. A equipe poderá ajudar a avaliar a opção adequada.</p></details>
-          <details><summary>Posso enviar fotos dos móveis?</summary><p>Sim. Depois de abrir o WhatsApp com a mensagem preparada, você pode anexar fotos e complementar sua solicitação antes de enviar.</p></details>
-          <details><summary>Escadas e itens que não cabem no elevador alteram o preço?</summary><p>Podem influenciar a avaliação. Descreva os andares, elevadores e itens grandes no formulário para a equipe considerar essas condições.</p></details>
-        </div>
-      </div>
-    </section>
-    <section class="final-cta">
-      <div class="wrap">
-        <div class="final-card"><div><h2>Vai mudar?<br>Vai com as Minas. 💖</h2><p>Conte com uma equipe que entende que mudança não é só levar coisas — é cuidar de uma nova fase.</p></div><a class="btn" href="#orcamento">Pedir meu orçamento <span class="arrow">↗</span></a></div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="wrap">
-      <div class="footer-top">
-        <div class="footer-brand"><img src="./logo.svg" alt=""><div><b>Carreto das Minas</b><span>SUA MUDANÇA, NOSSA MISSÃO. ♥</span><p>Desde 2016 · São Paulo, Grande SP e outros estados</p></div></div>
-        <nav class="footer-links" aria-label="Links do rodapé"><a href="#servicos">Serviços</a><a href="#nosso-jeito">Nosso jeito</a><a href="#frota">Nossa frota</a><a href="https://www.instagram.com/carretodasminas/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://wa.me/5511993806243" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></nav>
-      </div>
-      <div class="footer-bottom"><p>© <span id="year"></span> Carreto das Minas. Todos os direitos reservados.</p><p>Feito com cuidado, do mesmo jeito que a gente acredita nas mudanças. 💗</p></div>
-    </div>
-  </footer>
-  <a class="floating-wa" href="https://wa.me/5511993806243" target="_blank" rel="noopener noreferrer" aria-label="Conversar com Carreto das Minas pelo WhatsApp">☏</a>
-  <script>
-    (() => {
-      const whatsappNumber = '5511993806243';
-      const form = document.getElementById('quote-form');
-      const status = document.getElementById('form-status');
-      const year = document.getElementById('year');
-      year.textContent = new Date().getFullYear();
-      const today = new Date();
-      const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
-      document.getElementById('date').min = localDate;
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        if (!form.reportValidity()) return;
-        const data = new FormData(form);
-        const read = (key) => String(data.get(key) || '').trim();
-        const date = read('date') ? new Date(read('date') + 'T12:00:00').toLocaleDateString('pt-BR') : 'Não definida';
-        const message = [
-          'Olá! Gostaria de solicitar um orçamento com o Carreto das Minas 💖',
-          '',
-          '*Nome:* ' + read('name'),
-          '*Telefone:* ' + (read('phone') || 'Não informado'),
-          '*Data desejada:* ' + date,
-          '*Lista de itens:* ' + read('items'),
-          '*Endereço de retirada:* ' + read('pickup'),
-          '*Tipo de local na retirada:* ' + read('pickup-type'),
-          '*Endereço de entrega:* ' + read('delivery'),
-          '*Tipo de local na entrega:* ' + read('delivery-type'),
-          '*Escadas/elevadores/acesso:* ' + (read('access') || 'Não informado'),
-          '*Veículo:* ' + read('vehicle'),
-          '*Montagem/desmontagem:* ' + read('assembly'),
-          '*Embalagem especial:* ' + read('packing'),
-          '*Outros detalhes:* ' + (read('details') || 'Não informado'),
-          '',
-          'Fico no aguardo da avaliação. Obrigada(o)!'
-        ].join('\n');
-        const url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
-        status.textContent = 'Abrindo o WhatsApp para você revisar e enviar sua solicitação…';
-        const popup = window.open(url, '_blank', 'noopener,noreferrer');
-        if (!popup) window.location.href = url;
-      });
-    })();
-  </script>
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    const read = key => String(data.get(key) || '').trim();
+    const formattedDate = read('date') ? new Date(read('date') + 'T12:00:00').toLocaleDateString('pt-BR') : 'Não definida';
+    const message = [
+      'Olá! Vim pelo site do Carreto das Minas e gostaria de pedir um orçamento. 💖',
+      '',
+      '*Nome:* ' + read('name'),
+      '*Telefone:* ' + (read('phone') || 'Não informado'),
+      '*Data desejada:* ' + formattedDate,
+      '*Lista de itens:* ' + read('items'),
+      '*Endereço de retirada:* ' + read('pickup'),
+      '*Tipo de local na retirada:* ' + read('pickup-type'),
+      '*Endereço de entrega:* ' + read('delivery'),
+      '*Tipo de local na entrega:* ' + read('delivery-type'),
+      '*Escadas/elevadores/acesso:* ' + (read('access') || 'Não informado'),
+      '*Tipo de veículo:* ' + read('vehicle'),
+      '*Montagem/desmontagem:* ' + read('assembly'),
+      '*Embalagem especial:* ' + read('packing'),
+      '*Outros detalhes:* ' + (read('details') || 'Não informado'),
+      '',
+      'Aguardo a avaliação. Obrigada(o)!'
+    ].join('\n');
+    const url = 'https://wa.me/' + number + '?text=' + encodeURIComponent(message);
+    status.textContent = 'Abrindo o WhatsApp para você revisar e enviar a solicitação…';
+    const popup = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!popup) window.location.href = url;
+  });
+})();
+</script>
 </body>
 </html>
