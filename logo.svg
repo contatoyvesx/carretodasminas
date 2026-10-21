@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 150" role="img" aria-labelledby="title">
+<title id="title">Carreto das Minas</title>
+<rect width="420" height="150" rx="18" fill="#fffaf8"/>
+<g opacity=".18" stroke="#b8b2ad" stroke-width="1.5" fill="none">
+<path d="M0 25L70 0M0 76L150 0M0 130L250 0M44 150L345 0M180 150L420 34M315 150L420 105"/>
+<path d="M0 42L420 42M0 110L420 110M80 0V150M260 0V150M355 0V150"/>
+</g>
+<g fill="#f52d83" stroke="#171419" stroke-width="4" stroke-linejoin="round">
+<path d="M52 27c-14 0-25 11-25 25 0 18 25 41 25 41s25-23 25-41c0-14-11-25-25-25z"/>
+<circle cx="52" cy="52" r="8" fill="#fffaf8"/>
+<path d="M367 66c-14 0-25 11-25 25 0 18 25 41 25 41s25-23 25-41c0-14-11-25-25-25z"/>
+<circle cx="367" cy="91" r="8" fill="#fffaf8"/>
+</g>
+<g fill="#171419" text-anchor="middle" font-family="Impact,'Arial Narrow',sans-serif" font-weight="900">
+<text x="210" y="55" font-size="42" letter-spacing="-1.4">CARRETO</text>
+<text x="210" y="89" font-size="24" letter-spacing="3">DAS</text>
+<text x="210" y="125" font-size="42" letter-spacing="-1.8">MINAS</text>
+</g>
+</svg>
